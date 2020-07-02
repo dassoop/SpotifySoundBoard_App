@@ -197,6 +197,8 @@ public class API : MonoBehaviour
         }
     }
 
+
+    //REQUEST CURRENT PLAYLISTINFO FIRED OFF THE MAIN BUTTONS
     public void RequestCurrentPlaylistInfo()
     {
         isRequestingPlaylistInfo = true;
