@@ -70,7 +70,7 @@ public class API : MonoBehaviour
 
     public void Update()
     {
-       if (isPlayingString == "True")
+        if (isPlayingString == "True")
         {
             isTrackPlaying = true;
         }
@@ -81,11 +81,11 @@ public class API : MonoBehaviour
 
         if (isRequestingPlaylistInfo == false)
         {
-            //RequestCurrentPlaylistInfo();
+            RequestCurrentPlaylistInfo();
         }
         else
         {
-
+            //Debug.Log("NOT REQUESTING");
         }
 
         //RequestCurrentPlaylistInfo();
@@ -240,7 +240,7 @@ public class API : MonoBehaviour
                 //Debug.Log("ITEM MOVEMENT AMOUNT: " + playlistItemMovementAmount);
                 playlistItemMovementAmount -= 35;
                 playlistItemCount++;
-                Debug.Log("PARSING " + playlistItemCount);
+                //Debug.Log("PARSING " + playlistItemCount);
             }
         }
     }
@@ -255,7 +255,7 @@ public class API : MonoBehaviour
         {
             Destroy(gameObjects[i]);
         }
-        RequestCurrentPlaylistInfo();
+        //RequestCurrentPlaylistInfo();
         playlistItemMovementAmount = -35;
         playlistItemCount = 0;
     }

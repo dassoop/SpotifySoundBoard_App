@@ -32,6 +32,6 @@ public class MainButton : MonoBehaviour
 		//Debug.Log("Start Playlist: " + activePlaylistName);
 		//Debug.Log("uri: " + activePlaylistURI);
 		API.instance.StartPlaylistRequest(activePlaylistURI);
-        api.RequestCurrentPlaylistInfo();
+        //api.RequestCurrentPlaylistInfo();
     }
 }
