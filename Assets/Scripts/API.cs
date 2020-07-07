@@ -49,6 +49,8 @@ public class API : MonoBehaviour
     public string userPlaylistsString;
     [HideInInspector]
     public string currentPlaylist;
+    [HideInInspector]
+    public string currentPlaylistName;
 
 
     private bool isRequestingPlaylistInfo = false;
@@ -86,8 +88,9 @@ public class API : MonoBehaviour
 
         if(trackInfo != previousTrackInfo)
         {
-            Debug.Log("SONG CHANGED");
+            //Debug.Log("SONG CHANGED");
             RequestCurrentPlaylistInfo();
+            RequestPlaylistInfo();
             previousTrackInfo = trackInfo;
         }
         previousTrackInfo = trackInfo;
@@ -220,9 +223,28 @@ public class API : MonoBehaviour
             itemMovementAmount -= 35;
         }
     }
+    //REQUEST SINGLE PLAYLIST INFORMATION LIKE NAME
+    public void RequestPlaylistInfo()
+    {
+        //isRequestingPlaylistInfo = true;
 
+        currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/");
+        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
-    //REQUEST CURRENT PLAYLISTINFO FIRED OFF THE MAIN BUTTONS
+        StartCoroutine(ResponsePlaylistInfo(www));
+    }
+
+    IEnumerator ResponsePlaylistInfo(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+        Debug.Log(www.downloadHandler.text);
+        JSONNode playlistInfoItemResponse = JSON.Parse(www.downloadHandler.text);
+        currentPlaylistName = playlistInfoItemResponse["name"];
+        Debug.Log(currentPlaylistName);
+    }
+
+    //REQUEST CURRENT PLAYLISTINFO (NO LONGER FIRED OFF THE MAIN BUTTONS)
     public void RequestCurrentPlaylistInfo()
     {
         isRequestingPlaylistInfo = true;
@@ -238,13 +260,11 @@ public class API : MonoBehaviour
     IEnumerator ResponseCurrentPlaylistInfo(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
-        
 
         //Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
         JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
         RefreshCurrentPlaylistInfo();
         ParsePlaylistItemResponse(playlistItemResponse);
-
     }
 
     public void ParsePlaylistItemResponse(JSONNode playlistItemResponse)
@@ -255,6 +275,8 @@ public class API : MonoBehaviour
             {
                 string playlistItemName = item["track"]["name"];
                 string playlistItemURI = item["track"]["uri"];
+                //string playlistName = item["name"];
+                //Debug.Log(playlistName);
 
                 Vector3 newPosition = new Vector3(currentPlaylistLabel.position.x, currentPlaylistLabel.position.y + playlistItemMovementAmount, currentPlaylistLabel.position.z);
                 Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);

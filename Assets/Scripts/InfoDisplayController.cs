@@ -9,6 +9,7 @@ public class InfoDisplayController : MonoBehaviour
     public Text trackArtistDisplay;
     public Text playlistURIDisplay;
     public Text userPlaylists;
+    public Text currentPlaylistDisplay;
 
 
     public API api;
@@ -20,6 +21,7 @@ public class InfoDisplayController : MonoBehaviour
         trackNameDisplay.text = api.trackInfo;
         trackArtistDisplay.text = api.trackArtist;
         userPlaylists.text = api.userPlaylistsString;
+        currentPlaylistDisplay.text = api.currentPlaylistName;
         //Debug.Log(api.trackArtist);
     }
 }

@@ -1,0 +1,417 @@
+﻿{
+  "collaborative" : false,
+  "description" : "a deadpan recontextualisation of glossy corporate music from a small number of artists on the internet reconstructing sound from heavy sampling of popular music &amp; 80s/90s TV ads, looping, slowed down, pitch alterations w/ chop &amp; screw fx",
+  "external_urls" :
+    {
+        "spotify" : "https://open.spotify.com/playlist/17HYiAIcwlDEg5RgVkm4L7"
+    },
+  "followers" :
+    {
+        "href" : null,
+        "total" : 215622
+    },
+  "href" : "https://api.spotify.com/v1/playlists/17HYiAIcwlDEg5RgVkm4L7",
+  "id" : "17HYiAIcwlDEg5RgVkm4L7",
+  "images" :
+    [ {
+        "height" : null,
+        "url" : "https://i.scdn.co/image/ab67706c0000da8400e4a7205713f30316157bb8",
+        "width" : null
+    } ],
+  "name" : "Vaporwave",
+  "owner" : {
+    "display_name" : "After Eating",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/user/iam3"
+    },
+    "href" : "https://api.spotify.com/v1/users/iam3",
+    "id" : "iam3",
+    "type" : "user",
+    "uri" : "spotify:user:iam3"
+  },
+  "primary_color" : null,
+  "public" : true,
+  "snapshot_id" : "MTU4NywyZmM1NWU0MWNkNTIwYzQwZGZiMzljNzQ5NmU1YWM1ZjVmZTFlMWJm",
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/playlists/17HYiAIcwlDEg5RgVkm4L7/tracks?offset=0&limit=100",
+    "items" : [ {
+      "added_at" : "2013-08-25T19:54:23Z",
+      "added_by" : {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/user/iam3"
+        },
+        "href" : "https://api.spotify.com/v1/users/iam3",
+        "id" : "iam3",
+        "type" : "user",
+        "uri" : "spotify:user:iam3"
+      },
+      "is_local" : false,
+      "primary_color" : null,
+      "track" : {
+        "album" : {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/0va8U409dr4gA1zQ2gSnD5"
+            },
+            "href" : "https://api.spotify.com/v1/artists/0va8U409dr4gA1zQ2gSnD5",
+            "id" : "0va8U409dr4gA1zQ2gSnD5",
+            "name" : "18 Carat Affair",
+            "type" : "artist",
+            "uri" : "spotify:artist:0va8U409dr4gA1zQ2gSnD5"
+          } ],
+          "available_markets" : [ ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/1l3ok2CuYB8wWKUTm4jssh"
+          },
+          "href" : "https://api.spotify.com/v1/albums/1l3ok2CuYB8wWKUTm4jssh",
+          "id" : "1l3ok2CuYB8wWKUTm4jssh",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2732cc262dd19f5f98eb5ff4c8e",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e022cc262dd19f5f98eb5ff4c8e",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048512cc262dd19f5f98eb5ff4c8e",
+            "width" : 64
+          } ],
+          "name" : "Vintage Romance",
+          "release_date" : "2011-07-26",
+          "release_date_precision" : "day",
+          "total_tracks" : 14,
+          "type" : "album",
+          "uri" : "spotify:album:1l3ok2CuYB8wWKUTm4jssh"
+        },
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/0va8U409dr4gA1zQ2gSnD5"
+          },
+          "href" : "https://api.spotify.com/v1/artists/0va8U409dr4gA1zQ2gSnD5",
+          "id" : "0va8U409dr4gA1zQ2gSnD5",
+          "name" : "18 Carat Affair",
+          "type" : "artist",
+          "uri" : "spotify:artist:0va8U409dr4gA1zQ2gSnD5"
+        } ],
+        "available_markets" : [ ],
+        "disc_number" : 1,
+        "duration_ms" : 98771,
+        "episode" : false,
+        "explicit" : false,
+        "external_ids" : {
+          "isrc" : "USI4R1121240"
+        },
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/track/61QkubO5ny4DtTFoOaIRGg"
+        },
+        "href" : "https://api.spotify.com/v1/tracks/61QkubO5ny4DtTFoOaIRGg",
+        "id" : "61QkubO5ny4DtTFoOaIRGg",
+        "is_local" : false,
+        "name" : "Desire",
+        "popularity" : 0,
+        "preview_url" : null,
+        "track" : true,
+        "track_number" : 1,
+        "type" : "track",
+        "uri" : "spotify:track:61QkubO5ny4DtTFoOaIRGg"
+      },
+      "video_thumbnail" : {
+        "url" : null
+      }
+    }, {
+      "added_at" : "2013-08-25T19:55:09Z",
+      "added_by" : {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/user/iam3"
+        },
+        "href" : "https://api.spotify.com/v1/users/iam3",
+        "id" : "iam3",
+        "type" : "user",
+        "uri" : "spotify:user:iam3"
+      },
+      "is_local" : false,
+      "primary_color" : null,
+      "track" : {
+        "album" : {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/0va8U409dr4gA1zQ2gSnD5"
+            },
+            "href" : "https://api.spotify.com/v1/artists/0va8U409dr4gA1zQ2gSnD5",
+            "id" : "0va8U409dr4gA1zQ2gSnD5",
+            "name" : "18 Carat Affair",
+            "type" : "artist",
+            "uri" : "spotify:artist:0va8U409dr4gA1zQ2gSnD5"
+          } ],
+          "available_markets" : [ ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/1l3ok2CuYB8wWKUTm4jssh"
+          },
+          "href" : "https://api.spotify.com/v1/albums/1l3ok2CuYB8wWKUTm4jssh",
+          "id" : "1l3ok2CuYB8wWKUTm4jssh",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2732cc262dd19f5f98eb5ff4c8e",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e022cc262dd19f5f98eb5ff4c8e",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048512cc262dd19f5f98eb5ff4c8e",
+            "width" : 64
+          } ],
+          "name" : "Vintage Romance",
+          "release_date" : "2011-07-26",
+          "release_date_precision" : "day",
+          "total_tracks" : 14,
+          "type" : "album",
+          "uri" : "spotify:album:1l3ok2CuYB8wWKUTm4jssh"
+        },
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/0va8U409dr4gA1zQ2gSnD5"
+          },
+          "href" : "https://api.spotify.com/v1/artists/0va8U409dr4gA1zQ2gSnD5",
+          "id" : "0va8U409dr4gA1zQ2gSnD5",
+          "name" : "18 Carat Affair",
+          "type" : "artist",
+          "uri" : "spotify:artist:0va8U409dr4gA1zQ2gSnD5"
+        } ],
+        "available_markets" : [ ],
+        "disc_number" : 1,
+        "duration_ms" : 72639,
+        "episode" : false,
+        "explicit" : false,
+        "external_ids" : {
+          "isrc" : "USI4R1121248"
+        },
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/track/6pDnccriJzA9ntXMXFyjG2"
+        },
+        "href" : "https://api.spotify.com/v1/tracks/6pDnccriJzA9ntXMXFyjG2",
+        "id" : "6pDnccriJzA9ntXMXFyjG2",
+        "is_local" : false,
+        "name" : "Passion",
+        "popularity" : 0,
+        "preview_url" : null,
+        "track" : true,
+        "track_number" : 9,
+        "type" : "track",
+        "uri" : "spotify:track:6pDnccriJzA9ntXMXFyjG2"
+      },
+      "video_thumbnail" : {
+        "url" : null
+      }
+    }, {
+      "added_at" : "2013-08-25T19:57:39Z",
+      "added_by" : {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/user/iam3"
+        },
+        "href" : "https://api.spotify.com/v1/users/iam3",
+        "id" : "iam3",
+        "type" : "user",
+        "uri" : "spotify:user:iam3"
+      },
+      "is_local" : false,
+      "primary_color" : null,
+      "track" : {
+        "album" : {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/6eDKMXn3OBIkI8jcY7JtlI"
+            },
+            "href" : "https://api.spotify.com/v1/artists/6eDKMXn3OBIkI8jcY7JtlI",
+            "id" : "6eDKMXn3OBIkI8jcY7JtlI",
+            "name" : "ESPRIT z󢮊            "type" : "artist",
+            "uri" : "spotify:artist:6eDKMXn3OBIkI8jcY7JtlI"
+          } ],
+          "available_markets" : [ ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/3kT51yUxpFuxbFTXIC8xRW"
+          },
+          "href" : "https://api.spotify.com/v1/albums/3kT51yUxpFuxbFTXIC8xRW",
+          "id" : "3kT51yUxpFuxbFTXIC8xRW",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2734b9c98384f6bdb548759a821",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e024b9c98384f6bdb548759a821",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048514b9c98384f6bdb548759a821",
+            "width" : 64
+          } ],
+          "name" : "Summer Night",
+          "release_date" : "2013-04-08",
+          "release_date_precision" : "day",
+          "total_tracks" : 6,
+          "type" : "album",
+          "uri" : "spotify:album:3kT51yUxpFuxbFTXIC8xRW"
+        },
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/6eDKMXn3OBIkI8jcY7JtlI"
+          },
+          "href" : "https://api.spotify.com/v1/artists/6eDKMXn3OBIkI8jcY7JtlI",
+          "id" : "6eDKMXn3OBIkI8jcY7JtlI",
+          "name" : "ESPRIT z󢮊          "type" : "artist",
+          "uri" : "spotify:artist:6eDKMXn3OBIkI8jcY7JtlI"
+        } ],
+        "available_markets" : [ ],
+        "disc_number" : 1,
+        "duration_ms" : 164835,
+        "episode" : false,
+        "explicit" : false,
+        "external_ids" : {
+          "isrc" : "GBXS51312905"
+        },
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/track/7pm2FfEU1UsP3GhbHFFb9i"
+        },
+        "href" : "https://api.spotify.com/v1/tracks/7pm2FfEU1UsP3GhbHFFb9i",
+        "id" : "7pm2FfEU1UsP3GhbHFFb9i",
+        "is_local" : false,
+        "name" : "Pizza Day",
+        "popularity" : 0,
+        "preview_url" : null,
+        "track" : true,
+        "track_number" : 5,
+        "type" : "track",
+        "uri" : "spotify:track:7pm2FfEU1UsP3GhbHFFb9i"
+      },
+      "video_thumbnail" : {
+        "url" : null
+      }
+    }, {
+      "added_at" : "2013-08-25T19:53:09Z",
+      "added_by" : {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/user/iam3"
+        },
+        "href" : "https://api.spotify.com/v1/users/iam3",
+        "id" : "iam3",
+        "type" : "user",
+        "uri" : "spotify:user:iam3"
+      },
+      "is_local" : false,
+      "primary_color" : null,
+      "track" : {
+        "album" : {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/28516pIwBLUO62yBiLAfdI"
+            },
+            "href" : "https://api.spotify.com/v1/artists/28516pIwBLUO62yBiLAfdI",
+            "id" : "28516pIwBLUO62yBiLAfdI",
+            "name" : "luxury elite",
+            "type" : "artist",
+            "uri" : "spotify:artist:28516pIwBLUO62yBiLAfdI"
+          } ],
+          "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/0LOSJF9SLsu9UPamEbfkpj"
+          },
+          "href" : "https://api.spotify.com/v1/albums/0LOSJF9SLsu9UPamEbfkpj",
+          "id" : "0LOSJF9SLsu9UPamEbfkpj",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2739b89380bbeaa2f3890a6873b",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e029b89380bbeaa2f3890a6873b",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048519b89380bbeaa2f3890a6873b",
+            "width" : 64
+          } ],
+          "name" : "With Love",
+          "release_date" : "2013-03-15",
+          "release_date_precision" : "day",
+          "total_tracks" : 14,
+          "type" : "album",
+          "uri" : "spotify:album:0LOSJF9SLsu9UPamEbfkpj"
+        },
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/28516pIwBLUO62yBiLAfdI"
+          },
+          "href" : "https://api.spotify.com/v1/artists/28516pIwBLUO62yBiLAfdI",
+          "id" : "28516pIwBLUO62yBiLAfdI",
+          "name" : "luxury elite",
+          "type" : "artist",
+          "uri" : "spotify:artist:28516pIwBLUO62yBiLAfdI"
+        } ],
+        "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+        "disc_number" : 1,
+        "duration_ms" : 161278,
+        "episode" : false,
+        "explicit" : false,
+        "external_ids" : {
+          "isrc" : "GBXS51312707"
+        },
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/track/2TjAHMFLFsKdXXqaePxwC6"
+        },
+        "href" : "https://api.spotify.com/v1/tracks/2TjAHMFLFsKdXXqaePxwC6",
+        "id" : "2TjAHMFLFsKdXXqaePxwC6",
+        "is_local" : false,
+        "name" : "Midnight",
+        "popularity" : 44,
+        "preview_url" : "https://p.scdn.co/mp3-preview/15c5afce0a385b976c2de5f208052ec07b7cbfe3?cid=ef6bfa33a6644af9a8faa584319caeb4",
+        "track" : true,
+        "track_number" : 7,
+        "type" : "track",
+        "uri" : "spotify:track:2TjAHMFLFsKdXXqaePxwC6"
+      },
+      "video_thumbnail" : {
+        "url" : null
+      }
+    }, {
+      "added_at" : "2013-08-25T19:53:09Z",
+      "added_by" : {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/user/iam3"
+        },
+        "href" : "https://api.spotify.com/v1/users/iam3",
+        "id" : "iam3",
+        "type" : "user",
+        "uri" : "spotify:user:iam3"
+      },
+      "is_local" : false,
+      "primary_color" : null,
+      "track" : {
+        "album" : {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/28516pIwBLUO62yBiLAfdI"
+            },
+            "href" : "https://api.spotify.com/v1/artists/28516pIwBLUO62yBiLAfdI",
+            "id" : "28516pIwBLUO62yBiLAfdI",
+            "name" : "luxury elite",
+            "type" : "artist",
+            "uri" : "spotify:artist:28516pIwBLUO62yBiLAfdI"
+          } ],
+          "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/0LOSJF9SLsu9UPamEbfkpj"
+          },
+          "href" : "https://api.spotify.com/v1/albums/0LOSJF9SLsu9UPamEbfkpj",
+          "id" : "0LOSJF9SLsu9UPamEbfkpj",
+          "images" : [ {
+            "height" : 640,
+<message truncated>
