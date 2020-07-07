@@ -1,29 +1,16 @@
 ﻿<Properties StartupConfiguration="{7900B1A6-24ED-41F1-1500-43595DB93EEE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/API.cs">
     <Files>
-      <File FileName="Assets/Scripts/LoginPrompt.cs" Line="17" Column="6" />
-      <File FileName="Assets/Scripts/API.cs" Line="88" Column="43" />
-      <File FileName="Assets/Scripts/MainButton.cs" />
+      <File FileName="Assets/Scripts/API.cs" Line="306" Column="55" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SpotifySoundboardApp" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="API.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="89b5343f-9a97-41d5-9457-fed9639c3b9c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c7ef2fcf-100d-4f7c-8ecd-c6fc7960a31d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/lancemac/Documents/GitRepositories/SpotifySoundboardApp/Assets/Scripts/UserPlaylists_Item.cs" relfile="Assets/Scripts/UserPlaylists_Item.cs" line="33" column="5" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

@@ -18,6 +18,7 @@ public class API : MonoBehaviour
     public GameObject textConnected;
     public GameObject userPlaylistItem;
     public GameObject currentPlaylistItem;
+    public GameObject panelCurrentPlaylist;
     public Slider spotifyVolumeSlider;
     public JSONNode playlistItemResponse;
     public int playlistItemCount = 0;
@@ -36,6 +37,8 @@ public class API : MonoBehaviour
     //String from Spotify JSON
     [HideInInspector]
     public string trackInfo;
+    [HideInInspector]
+    public string previousTrackInfo;
     [HideInInspector]
     public string trackURI;
     [HideInInspector]
@@ -68,13 +71,20 @@ public class API : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        //StartCoroutine(CheckCurrentTrack());
+    }
+
     public void Update()
     {
+        //Debug.Log(trackInfo);
+
         if (isPlayingString == "True")
         {
             isTrackPlaying = true;
         }
-       else
+        else
         {
             isTrackPlaying = false;
         }
@@ -153,7 +163,7 @@ public class API : MonoBehaviour
     //**GET USER PLAYLISTS**
     public void RequestUserPlaylists()
     {
-        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/me/playlists?limit=8");
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/me/playlists?limit=50");
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
         StartCoroutine(ResponseUserPlaylists(www));
@@ -189,6 +199,9 @@ public class API : MonoBehaviour
 
             Vector3 newPosition = new Vector3(userPlayListLabel.position.x, userPlayListLabel.position.y + itemMovementAmount, userPlayListLabel.position.z);
             Instantiate(userPlaylistItem, newPosition, userPlayListLabel.rotation);
+
+            //var newItem = Instantiate(userPlaylistItem, newPosition, userPlayListLabel.rotation);
+            //newItem.transform.SetParent(panelCurrentPlaylist.transform);
 
             userPlaylistItem.GetComponent<UserPlaylists_Item>().SetItemInfo(playlistName, playlistURI);
 
@@ -227,7 +240,7 @@ public class API : MonoBehaviour
     {
         foreach (JSONNode item in playlistItemResponse["items"])
         {
-            if(playlistItemCount < 6)
+            if (playlistItemCount < 6)
             {
                 string playlistItemName = item["track"]["name"];
                 string playlistItemURI = item["track"]["uri"];
@@ -495,8 +508,27 @@ public class API : MonoBehaviour
             Debug.Log(www.downloadHandler.text);
         }
     }
-}
 
+    IEnumerator CheckCurrentTrack()
+    {
+        while (true)
+        {
+            string delayedTrackInfo = trackInfo;
+            yield return new WaitForSeconds(.2f);
+
+
+            if (delayedTrackInfo != trackInfo)
+            {
+                Debug.Log("TRACK CHANGED");
+            }
+
+            else
+            {
+
+            }
+        }
+    }
+}
 //-H "Accept: application/json"
 //-H "Content-Type: application/json"
 

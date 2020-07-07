@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5977549206343038652}
   - component: {fileID: 4019377060278615664}
   - component: {fileID: 4619862117060996648}
+  - component: {fileID: 1948723205801082466}
   m_Layer: 5
   m_Name: Text_UserPlaylists_Item
   m_TagString: Untagged
@@ -64,6 +65,7 @@ MonoBehaviour:
   playlistURI: spotify:playlist:75lOfFdPLG6L9JIZtutbyb
   playlistItemText: {fileID: 2588560260028919627}
   mainButton: {fileID: 0}
+  mainButtonObjects: []
 --- !u!114 &4019377060278615664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +151,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1948723205801082466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977549206343038654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &6524021925653793806
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,8 @@ public class UserPlaylists_Item : MonoBehaviour
     private void Update()
     {
         //Set Parent To Canvas
-        gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
+        //gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
+        gameObject.transform.SetParent(GameObject.Find("UserPlaylistsContent").transform);
     }
 
     public void SetItemInfo(string name, string uri)

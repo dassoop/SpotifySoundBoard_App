@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4019377060278615664}
   - component: {fileID: 4619862117060996648}
   - component: {fileID: 8213427209489629768}
+  - component: {fileID: 340517613831104428}
   m_Layer: 5
   m_Name: CurrentPlaylist_Item
   m_TagString: CurrentPlaylist_Item
@@ -37,7 +38,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.9, y: 68.8}
+  m_AnchoredPosition: {x: 1460.4813, y: 1442.0498}
   m_SizeDelta: {x: 163.4, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5977549206343038642
@@ -145,10 +146,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86697140e84934e6ebe31b160be06584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playlistItemName: 
-  playlistItemURI: 
+  playlistItemName: Destructo
+  playlistItemURI: spotify:track:72dlRtRULviBnoxATyLBjW
   playlistItemText: {fileID: 2588560260028919627}
   mainButtonObjects: []
+  panelCurrentPlaylist: {fileID: 0}
+--- !u!114 &340517613831104428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977549206343038654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &6524021925653793806
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,4 +242,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: run
+  m_Text: Destructo

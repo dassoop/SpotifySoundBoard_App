@@ -9,16 +9,20 @@ public class CurrentPlaylist_Item : MonoBehaviour
     public string playlistItemURI;
     public Text playlistItemText;
     public GameObject[] mainButtonObjects;
+    public GameObject panelCurrentPlaylist;
 
     private void Start()
     {
-
+        //panelCurrentPlaylist = GameObject.Find("Panel_CurrentPlaylist");
+        //gameObject.transform.SetParent(panelCurrentPlaylist.transform);
+        //Debug.Log(panelCurrentPlaylist);
     }
 
     private void Update()
     {
         //Set Parent To Canvas
-        gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
+        //gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
+        gameObject.transform.SetParent(GameObject.Find("CurrentPlaylistContent").transform);
     }
 
     public void SetItemInfo(string name, string uri)
