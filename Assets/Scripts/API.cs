@@ -52,6 +52,7 @@ public class API : MonoBehaviour
 
 
     private bool isRequestingPlaylistInfo = false;
+    private bool isRequestingTrackInfo = false;
 
     private string URL = "https://accounts.spotify.com/api/token";
 
@@ -78,7 +79,19 @@ public class API : MonoBehaviour
 
     public void Update()
     {
-        //Debug.Log(trackInfo);
+        if (isRequestingTrackInfo == false)
+        {
+            RequestTrackInfo();
+        }
+
+        if(trackInfo != previousTrackInfo)
+        {
+            Debug.Log("SONG CHANGED");
+            RequestCurrentPlaylistInfo();
+            previousTrackInfo = trackInfo;
+        }
+        previousTrackInfo = trackInfo;
+        //RequestCurrentPlaylistInfo();
 
         if (isPlayingString == "True")
         {
@@ -89,16 +102,14 @@ public class API : MonoBehaviour
             isTrackPlaying = false;
         }
 
-        if (isRequestingPlaylistInfo == false)
-        {
-            RequestCurrentPlaylistInfo();
-        }
-        else
-        {
-            //Debug.Log("NOT REQUESTING");
-        }
+        //if (isRequestingPlaylistInfo == false)
+        //{
+        //    RequestCurrentPlaylistInfo();
+        //}
+        //else
+        //{
 
-        //RequestCurrentPlaylistInfo();
+        //}
     }
 
     //**Request Access Token with Code**
@@ -146,7 +157,7 @@ public class API : MonoBehaviour
         textInput.SetActive(false);
         textConnected.SetActive(true);
         RequestUserPlaylists();
-        RequestTrackInfo();
+        //RequestTrackInfo();
         //RequestCurrentPlaylistInfo();
     }
 
@@ -218,7 +229,7 @@ public class API : MonoBehaviour
 
         currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
         //UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=6");
-        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/tracks?limit=6");
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/tracks?limit=50");
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
         StartCoroutine(ResponseCurrentPlaylistInfo(www));
@@ -227,7 +238,7 @@ public class API : MonoBehaviour
     IEnumerator ResponseCurrentPlaylistInfo(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
-        isRequestingPlaylistInfo = false;
+        
 
         //Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
         JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
@@ -240,7 +251,7 @@ public class API : MonoBehaviour
     {
         foreach (JSONNode item in playlistItemResponse["items"])
         {
-            if (playlistItemCount < 6)
+            if (playlistItemCount < 50)
             {
                 string playlistItemName = item["track"]["name"];
                 string playlistItemURI = item["track"]["uri"];
@@ -256,6 +267,8 @@ public class API : MonoBehaviour
                 //Debug.Log("PARSING " + playlistItemCount);
             }
         }
+        isRequestingPlaylistInfo = false;
+        Debug.Log("DONE");
     }
 
     public void RefreshCurrentPlaylistInfo()
@@ -277,6 +290,7 @@ public class API : MonoBehaviour
     //**REQUEST TRACK INFO**
     public void RequestTrackInfo()
     {
+        isRequestingTrackInfo = true;
         //string bodyJsonString = "Body: Info";
         //byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
 
@@ -294,12 +308,12 @@ public class API : MonoBehaviour
 
         if (www.isNetworkError)
         {
-            Debug.Log(www.error);
+            //Debug.Log(www.error);
         }
 
         else
         {
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
         }
 
         JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
@@ -308,6 +322,8 @@ public class API : MonoBehaviour
         trackArtist = trackInfoResponse["artists"]["name"];
         isPlayingString = trackInfoResponse["is_playing"];
         currentPlaylist = trackInfoResponse["context"]["uri"];
+
+        isRequestingTrackInfo = false;
     }
 
 
@@ -356,7 +372,7 @@ public class API : MonoBehaviour
             Debug.Log(www.downloadHandler.text);
         }
 
-        RequestTrackInfo();
+        //RequestTrackInfo();
     }
 
     public void PauseButtonRequest()
@@ -383,7 +399,7 @@ public class API : MonoBehaviour
             Debug.Log(www.downloadHandler.text);
         }
 
-        RequestTrackInfo();
+        //RequestTrackInfo();
     }
 
     public void SkipButtonRequest()
@@ -412,7 +428,7 @@ public class API : MonoBehaviour
             Debug.Log(www.downloadHandler.text);
         }
 
-        RequestTrackInfo();
+        //RequestTrackInfo();
     }
 
     public void PreviousButtonRequest()
@@ -441,7 +457,7 @@ public class API : MonoBehaviour
             Debug.Log(www.downloadHandler.text);
         }
 
-        RequestTrackInfo();
+        //RequestTrackInfo();
     }
 
     //**START PLAYLIST REQUEST**
@@ -475,7 +491,7 @@ public class API : MonoBehaviour
         }
 
         //RefreshCurrentPlaylistInfo();
-        RequestTrackInfo();
+        //RequestTrackInfo();
     }
 
 

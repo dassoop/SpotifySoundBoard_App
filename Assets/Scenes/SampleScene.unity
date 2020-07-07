@@ -3921,6 +3921,7 @@ MonoBehaviour:
   playlistItemMovementAmount: -35
   isTrackPlaying: 0
   trackInfo: 
+  previousTrackInfo: 
   trackURI: 
   trackArtist: 
   isPlayingString: 
