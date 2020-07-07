@@ -271,6 +271,7 @@ public class API : MonoBehaviour
         Debug.Log("DONE");
     }
 
+    //**DELETE CURRENT PLAYLIST LIST AND RESET THE SPAWN POINT**
     public void RefreshCurrentPlaylistInfo()
     {
         GameObject[] gameObjects;
@@ -319,16 +320,22 @@ public class API : MonoBehaviour
         JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
         trackInfo = trackInfoResponse["item"]["name"];
         trackURI = trackInfoResponse["item"]["uri"];
-        trackArtist = trackInfoResponse["artists"]["name"];
+        //trackArtist = trackInfoResponse["item"]["album"]["artists"]["name"];
         isPlayingString = trackInfoResponse["is_playing"];
         currentPlaylist = trackInfoResponse["context"]["uri"];
 
+        foreach (JSONNode item in trackInfoResponse["item"]["album"]["artists"])
+        {
+            trackArtist = item["name"];
+            //string playlistURI = item["uri"];
+            
+        }
+
+        //Debug.Log("TRACK NAME: " + trackInfo);
+        //Debug.Log("ARTIST NAME: " + trackArtist);
+
         isRequestingTrackInfo = false;
     }
-
-
-
-
 
 
 
