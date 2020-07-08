@@ -51,15 +51,22 @@ public class API : MonoBehaviour
     public string currentPlaylist;
     [HideInInspector]
     public string currentPlaylistName;
+    [HideInInspector]
+    public string shuffleState;
+    [HideInInspector]
+    public string repeatState;
 
 
     private bool isRequestingPlaylistInfo = false;
     private bool isRequestingTrackInfo = false;
+    private bool isRequestingPlayerInfo = false;
 
     private string URL = "https://accounts.spotify.com/api/token";
 
     private string clientID = "ef6bfa33a6644af9a8faa584319caeb4";
     private string clientSecret = "94ec513e49cf472892006983735503fc";
+
+    private string deviceID;
 
     private void Awake()
     {
@@ -76,17 +83,23 @@ public class API : MonoBehaviour
 
     public void Start()
     {
-        //StartCoroutine(CheckCurrentTrack());
+        StartCoroutine(LoopingUpdate());
     }
 
     public void Update()
     {
+        //RequestPlayerInfo();
         if (isRequestingTrackInfo == false)
         {
             RequestTrackInfo();
         }
 
-        if(trackInfo != previousTrackInfo)
+        //if (isRequestingPlayerInfo == false)
+        //{
+        //    RequestPlayerInfo();
+        //}
+
+        if (trackInfo != previousTrackInfo)
         {
             //Debug.Log("SONG CHANGED");
             RequestCurrentPlaylistInfo();
@@ -94,7 +107,6 @@ public class API : MonoBehaviour
             previousTrackInfo = trackInfo;
         }
         previousTrackInfo = trackInfo;
-        //RequestCurrentPlaylistInfo();
 
         if (isPlayingString == "True")
         {
@@ -146,7 +158,7 @@ public class API : MonoBehaviour
         {
             // Show results as text
             //Debug.Log(www.downloadHandler.text);
-            Debug.Log(www.responseCode);
+            //Debug.Log(www.responseCode);
 
             // Or retrieve results as binary data
             byte[] results = www.downloadHandler.data;
@@ -193,7 +205,7 @@ public class API : MonoBehaviour
         }
         else
         {
-            Debug.Log(www.responseCode);
+            //Debug.Log(www.responseCode);
         }
 
         JSONNode playlistResponseInfo = JSON.Parse(www.downloadHandler.text);
@@ -227,8 +239,10 @@ public class API : MonoBehaviour
     public void RequestPlaylistInfo()
     {
         //isRequestingPlaylistInfo = true;
-
-        currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
+        if (currentPlaylist != null)
+        {
+            currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
+        }
         UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/");
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
@@ -238,10 +252,8 @@ public class API : MonoBehaviour
     IEnumerator ResponsePlaylistInfo(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
-        Debug.Log(www.downloadHandler.text);
         JSONNode playlistInfoItemResponse = JSON.Parse(www.downloadHandler.text);
         currentPlaylistName = playlistInfoItemResponse["name"];
-        Debug.Log(currentPlaylistName);
     }
 
     //REQUEST CURRENT PLAYLISTINFO (NO LONGER FIRED OFF THE MAIN BUTTONS)
@@ -249,7 +261,10 @@ public class API : MonoBehaviour
     {
         isRequestingPlaylistInfo = true;
 
-        currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
+        if (currentPlaylist != null)
+        {
+            currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
+        }
         //UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=6");
         UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/tracks?limit=50");
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
@@ -290,7 +305,6 @@ public class API : MonoBehaviour
             }
         }
         isRequestingPlaylistInfo = false;
-        Debug.Log("DONE");
     }
 
     //**DELETE CURRENT PLAYLIST LIST AND RESET THE SPAWN POINT**
@@ -355,7 +369,7 @@ public class API : MonoBehaviour
 
         //Debug.Log("TRACK NAME: " + trackInfo);
         //Debug.Log("ARTIST NAME: " + trackArtist);
-
+        //RequestPlayerInfo();
         isRequestingTrackInfo = false;
     }
 
@@ -454,7 +468,7 @@ public class API : MonoBehaviour
 
         else
         {
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
         }
 
         //RequestTrackInfo();
@@ -554,23 +568,85 @@ public class API : MonoBehaviour
         }
     }
 
-    IEnumerator CheckCurrentTrack()
+    IEnumerator LoopingUpdate()
     {
         while (true)
         {
-            string delayedTrackInfo = trackInfo;
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(1f);
+            RequestPlayerInfo();
+        }
+    }
 
+    public void RequestPlayerInfo()
+    {
+        isRequestingPlayerInfo = true;
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/me/player");
+        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
+        www.SetRequestHeader("Content-Type", "application/json");
+        www.SetRequestHeader("Accept", "application/json");
 
-            if (delayedTrackInfo != trackInfo)
-            {
-                Debug.Log("TRACK CHANGED");
-            }
+        StartCoroutine(ResponsePlayerInfo(www));
+    }
 
-            else
-            {
+    IEnumerator ResponsePlayerInfo(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+        //Debug.Log(www.downloadHandler.text);
+        JSONNode playerInfoResponse = JSON.Parse(www.downloadHandler.text);
+        deviceID = playerInfoResponse["device"]["id"];
+        shuffleState = playerInfoResponse["shuffle_state"];
+        repeatState = playerInfoResponse["repeat_state"];
+        //Debug.Log(shuffleState);
+        //Debug.Log(repeatState);
+        isRequestingPlayerInfo = false;
+    }
 
-            }
+    public void RepeatButtonRequest(String state)
+    {
+        //UnityWebRequest www = UnityWebRequest.Put("https://api.spotify.com/v1/me/player/repeat?state=context&device_id=0d1841b0976bae2a3a310dd74c0f3df354899bc8", "Accept: application/json");
+        UnityWebRequest www = UnityWebRequest.Put("https://api.spotify.com/v1/me/player/repeat?state=" + state + "&device_id=" + deviceID, "Accept: application/json");
+        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
+        www.SetRequestHeader("Content-Type", "application/json");
+        www.SetRequestHeader("Accept", "application/json");
+
+        StartCoroutine(RepeatButtonResponse(www));
+    }
+    IEnumerator RepeatButtonResponse(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError)
+        {
+            Debug.Log(www.error);
+        }
+
+        else
+        {
+            Debug.Log(www.downloadHandler.text);
+        }
+    }
+
+    public void ShuffleButtonRequest(String state)
+    {
+        UnityWebRequest www = UnityWebRequest.Put("https://api.spotify.com/v1/me/player/shuffle?state=" + state + "&device_id=" + deviceID, "Accept: application/json");
+        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
+        www.SetRequestHeader("Content-Type", "application/json");
+        www.SetRequestHeader("Accept", "application/json");
+
+        StartCoroutine(ShuffleButtonResponse(www));
+    }
+    IEnumerator ShuffleButtonResponse(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError)
+        {
+            Debug.Log(www.error);
+        }
+
+        else
+        {
+            Debug.Log(www.downloadHandler.text);
         }
     }
 }

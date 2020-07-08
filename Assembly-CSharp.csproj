@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Button_Shuffle.cs" />
     <Compile Include="Assets\Scripts\ActivateButton.cs" />
     <Compile Include="Assets\Scripts\API.cs" />
     <Compile Include="Assets\Scripts\Button_Play.cs" />
