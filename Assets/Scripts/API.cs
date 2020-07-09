@@ -299,7 +299,7 @@ public class API : MonoBehaviour
                 Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
 
                 currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
-                Debug.Log(playlistItemName);
+                //Debug.Log(playlistItemName);
 
                 //Debug.Log("ITEM MOVEMENT AMOUNT: " + playlistItemMovementAmount);
                 playlistItemMovementAmount -= 35;
@@ -651,6 +651,7 @@ public class API : MonoBehaviour
         {
             Debug.Log(www.downloadHandler.text);
         }
+        Debug.Log(shuffleState);
     }
 }
 //-H "Accept: application/json"

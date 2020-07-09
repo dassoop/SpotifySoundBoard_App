@@ -66,6 +66,9 @@
     <Compile Include="Assets\Scripts\ActivateButton.cs" />
     <Compile Include="Assets\Scripts\API.cs" />
     <Compile Include="Assets\Scripts\Button_Play.cs" />
+    <Compile Include="Assets\Scripts\Button_Repeat_Context.cs" />
+    <Compile Include="Assets\Scripts\Button_Repeat_Off.cs" />
+    <Compile Include="Assets\Scripts\Button_Repeat_Track.cs" />
     <Compile Include="Assets\Scripts\Button_Shuffle.cs" />
     <Compile Include="Assets\Scripts\ButtonSwitch.cs" />
     <Compile Include="Assets\Scripts\CurrentPlaylist_Item.cs" />

@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class CurrentPlaylist_Item : MonoBehaviour
 {
-    [HideInInspector]
     public string playlistItemName;
-    [HideInInspector]
     public string playlistItemURI;
     public Text playlistItemText;
     public GameObject[] mainButtonObjects;
