@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class CurrentPlaylist_Item : MonoBehaviour
 {
+    [HideInInspector]
     public string playlistItemName;
+    [HideInInspector]
     public string playlistItemURI;
     public Text playlistItemText;
     public GameObject[] mainButtonObjects;
@@ -16,12 +18,15 @@ public class CurrentPlaylist_Item : MonoBehaviour
         //panelCurrentPlaylist = GameObject.Find("Panel_CurrentPlaylist");
         //gameObject.transform.SetParent(panelCurrentPlaylist.transform);
         //Debug.Log(panelCurrentPlaylist);
+        //playlistItemName = "";
+        //playlistItemURI = "";
     }
 
     private void Update()
     {
         //Set Parent To Canvas
         //gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
+
         gameObject.transform.SetParent(GameObject.Find("CurrentPlaylistContent").transform);
     }
 
@@ -31,34 +36,4 @@ public class CurrentPlaylist_Item : MonoBehaviour
         playlistItemName = name;
         playlistItemText.text = name;
     }
-
-    //public void SendInfoToPlayButton()
-    //{
-
-    //    mainButtonObjects = GameObject.FindGameObjectsWithTag("TriggerButton");
-
-    //    foreach (GameObject mainButtonObject in mainButtonObjects)
-    //    {
-    //        //Debug.Log(mainButtonObject);
-    //        mainButton = mainButtonObject.GetComponent<MainButton>();
-    //        Debug.Log(mainButton);
-
-    //        if (mainButton.isActive == true)
-    //        {
-    //            mainButton.activePlaylistName = playlistItemName;
-    //            mainButton.activePlaylistURI = playlistItemURI;
-    //            mainButton.isActive = false;
-    //        }
-
-    //        else
-    //        {
-
-    //        }
-    //    }
-
-
-
-
-    //}
-
 }

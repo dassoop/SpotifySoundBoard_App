@@ -266,7 +266,7 @@ public class API : MonoBehaviour
             currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
         }
         //UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=6");
-        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/tracks?limit=50");
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/tracks?limit=30");
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
         StartCoroutine(ResponseCurrentPlaylistInfo(www));
@@ -276,17 +276,19 @@ public class API : MonoBehaviour
     {
         yield return www.SendWebRequest();
 
-        //Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
-        JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
+        Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
         RefreshCurrentPlaylistInfo();
+        JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
+        //RefreshCurrentPlaylistInfo();
         ParsePlaylistItemResponse(playlistItemResponse);
     }
 
     public void ParsePlaylistItemResponse(JSONNode playlistItemResponse)
     {
+        playlistItemCount = 0;
         foreach (JSONNode item in playlistItemResponse["items"])
         {
-            if (playlistItemCount < 50)
+            if (playlistItemCount <= 30)
             {
                 string playlistItemName = item["track"]["name"];
                 string playlistItemURI = item["track"]["uri"];
@@ -297,6 +299,7 @@ public class API : MonoBehaviour
                 Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
 
                 currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
+                Debug.Log(playlistItemName);
 
                 //Debug.Log("ITEM MOVEMENT AMOUNT: " + playlistItemMovementAmount);
                 playlistItemMovementAmount -= 35;
