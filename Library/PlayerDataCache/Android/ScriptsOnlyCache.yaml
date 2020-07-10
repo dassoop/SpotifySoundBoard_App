@@ -5,9 +5,15 @@ ScriptsOnlyBuild:
     - ActivateButton
     - ButtonSwitch
     - Button_Play
+    - Button_Repeat_Context
+    - Button_Repeat_Off
+    - Button_Repeat_Track
+    - Button_Shuffle
+    - CurrentPlaylist_Item
     - InfoDisplayController
     - LoginPrompt
     - MainButton
+    - TrackDuration
     - UserPlaylists_Item
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -19,6 +25,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
@@ -40,39 +48,55 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9324}
+      Script: {instanceID: 9210}
     - Class: 114
-      Script: {instanceID: 9326}
+      Script: {instanceID: 9214}
+    - Class: 114
+      Script: {instanceID: 9288}
+    - Class: 114
+      Script: {instanceID: 9330}
     - Class: 114
       Script: {instanceID: 9332}
     - Class: 114
       Script: {instanceID: 9338}
     - Class: 114
-      Script: {instanceID: 9346}
+      Script: {instanceID: 9344}
     - Class: 114
-      Script: {instanceID: 9348}
+      Script: {instanceID: 9352}
+    - Class: 114
+      Script: {instanceID: 9354}
+    - Class: 114
+      Script: {instanceID: 9360}
     - Class: 114
       Script: {instanceID: 9380}
     - Class: 114
-      Script: {instanceID: 9382}
+      Script: {instanceID: 9386}
     - Class: 114
-      Script: {instanceID: 9384}
+      Script: {instanceID: 9388}
     - Class: 114
-      Script: {instanceID: 9434}
+      Script: {instanceID: 9390}
     - Class: 114
-      Script: {instanceID: 9522}
+      Script: {instanceID: 9440}
     - Class: 114
-      Script: {instanceID: 9590}
+      Script: {instanceID: 9528}
     - Class: 114
-      Script: {instanceID: 9618}
+      Script: {instanceID: 9596}
     - Class: 114
-      Script: {instanceID: 9972}
+      Script: {instanceID: 9598}
     - Class: 114
-      Script: {instanceID: 10360}
+      Script: {instanceID: 9626}
     - Class: 114
-      Script: {instanceID: 10376}
+      Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 10586}
+      Script: {instanceID: 9982}
+    - Class: 114
+      Script: {instanceID: 10370}
+    - Class: 114
+      Script: {instanceID: 10386}
+    - Class: 114
+      Script: {instanceID: 10560}
+    - Class: 114
+      Script: {instanceID: 10598}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -90,6 +114,18 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TrackDuration
+  - hash:
+      serializedVersion: 2
+      Hash: 971b3825e18e2d54ccfdba4c853010e4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CurrentPlaylist_Item
   - hash:
       serializedVersion: 2
       Hash: 984dcc0ba3707b7691fbdca8ff508d28
@@ -126,6 +162,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 80459db8091f5f03fc6c91e2f39e1f7a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Button_Repeat_Context
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -326,7 +368,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 3f616576569e7a94cf3b7d30ed3fd5ff
+      Hash: 7fe128695feb7824c8d046fb9cbc90f2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InfoDisplayController
@@ -536,10 +578,16 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: c01eddd147ab647b8085644045d8c7ec
+      Hash: 1d13d9d2d6acf03f6eb59ae72a649fbe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: API
+  - hash:
+      serializedVersion: 2
+      Hash: 80459db8091f5f03fc6c91e2f39e1f7a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Button_Repeat_Track
   - hash:
       serializedVersion: 2
       Hash: f08a111e17bb701f9c9ec57bb78d9920
@@ -594,6 +642,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 80459db8091f5f03fc6c91e2f39e1f7a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Button_Repeat_Off
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -752,6 +806,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: 203a93cc44e256885cda5816a581ba78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Button_Shuffle
+  - hash:
+      serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -777,4 +837,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/AndroidTest.apk
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard.apk
