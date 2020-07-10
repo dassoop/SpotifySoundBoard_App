@@ -22,9 +22,10 @@ public class CurrentPlaylist_Item : MonoBehaviour
         {
             buttonGreen.SetActive(true);
         }
-        else
+        else if (API.instance.isTrackChanging == true)
         {
             buttonGreen.SetActive(false);
+            API.instance.isTrackChanging = false;
         }
     }
 
