@@ -4780,6 +4780,8 @@ MonoBehaviour:
   panelCurrentPlaylist: {fileID: 1378265545}
   spotifyVolumeSlider: {fileID: 891649083}
   playlistItemCount: 0
+  currentPlaylistItemPrefab: {fileID: 8213427209489629768, guid: a9d53a570e0ed429b969e073c5c867be,
+    type: 3}
   itemMovementAmount: -5
   playlistItemMovementAmount: -35
   isTrackPlaying: 0

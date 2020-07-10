@@ -23,6 +23,8 @@ public class API : MonoBehaviour
     public JSONNode playlistItemResponse;
     public int playlistItemCount = 0;
 
+    public CurrentPlaylist_Item currentPlaylistItemPrefab;
+
     [HideInInspector]
     public float itemMovementAmount = -35;
     [HideInInspector]
@@ -106,8 +108,8 @@ public class API : MonoBehaviour
         if (trackInfo != previousTrackInfo)
         {
             //Debug.Log("SONG CHANGED");
-            RequestCurrentPlaylistInfo();
             RequestPlaylistInfo();
+            RequestCurrentPlaylistInfo();
             previousTrackInfo = trackInfo;
         }
         previousTrackInfo = trackInfo;
@@ -602,7 +604,7 @@ public class API : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(.6f);
             //RequestPlayerInfo();
             RequestPlayerInfo();
             RequestTrackInfo();

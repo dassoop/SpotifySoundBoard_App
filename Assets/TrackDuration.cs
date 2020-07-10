@@ -13,7 +13,6 @@ public class TrackDuration : MonoBehaviour
     {
         durationFloat = float.Parse(API.instance.trackDuration, CultureInfo.InvariantCulture);
         progressFloat = float.Parse(API.instance.trackProgress, CultureInfo.InvariantCulture);
-        Debug.Log(durationFloat);
 
         gameObject.GetComponent<Slider>().maxValue = durationFloat;
         gameObject.GetComponent<Slider>().value = progressFloat;
