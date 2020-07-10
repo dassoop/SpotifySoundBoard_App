@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrackDuration : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float durationFloat;
+    private float progressFloat;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        durationFloat = float.Parse(API.instance.trackDuration, CultureInfo.InvariantCulture);
+        progressFloat = float.Parse(API.instance.trackProgress, CultureInfo.InvariantCulture);
+        Debug.Log(durationFloat);
+
+        gameObject.GetComponent<Slider>().maxValue = durationFloat;
+        gameObject.GetComponent<Slider>().value = progressFloat;
     }
 }
