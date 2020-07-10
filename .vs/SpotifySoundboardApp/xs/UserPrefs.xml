@@ -1,14 +1,13 @@
 ﻿<Properties StartupConfiguration="{7900B1A6-24ED-41F1-1500-43595DB93EEE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CurrentPlaylist_Item.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/API.cs">
     <Files>
       <File FileName="Assets/Scripts/InfoDisplayController.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/API.cs" Line="302" Column="47" />
-      <File FileName="Assets/Scripts/CurrentPlaylist_Item.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/API.cs" Line="391" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cafd2333-99be-4029-a114-1808dd7b99c9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="de506a2d-4820-492c-9cc0-267e5194ca2b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/lancemac/Documents/GitRepositories/SpotifySoundboardApp/Assets/Scripts/UserPlaylists_Item.cs" relfile="Assets/Scripts/UserPlaylists_Item.cs" line="33" column="5" />

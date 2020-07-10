@@ -11,15 +11,6 @@ public class CurrentPlaylist_Item : MonoBehaviour
     public GameObject[] mainButtonObjects;
     public GameObject panelCurrentPlaylist;
 
-    private void Start()
-    {
-        //panelCurrentPlaylist = GameObject.Find("Panel_CurrentPlaylist");
-        //gameObject.transform.SetParent(panelCurrentPlaylist.transform);
-        //Debug.Log(panelCurrentPlaylist);
-        //playlistItemName = "";
-        //playlistItemURI = "";
-    }
-
     private void Update()
     {
         //Set Parent To Canvas

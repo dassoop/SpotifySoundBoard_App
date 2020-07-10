@@ -55,6 +55,10 @@ public class API : MonoBehaviour
     public string shuffleState;
     [HideInInspector]
     public string repeatState;
+    [HideInInspector]
+    public string trackProgress;
+    [HideInInspector]
+    public string trackDuration;
 
 
     private bool isRequestingPlaylistInfo = false;
@@ -89,10 +93,10 @@ public class API : MonoBehaviour
     public void Update()
     {
         //RequestPlayerInfo();
-        if (isRequestingTrackInfo == false)
-        {
-            RequestTrackInfo();
-        }
+        //if (isRequestingTrackInfo == false)
+        //{
+        //    RequestTrackInfo();
+        //}
 
         //if (isRequestingPlayerInfo == false)
         //{
@@ -183,9 +187,6 @@ public class API : MonoBehaviour
         Request();
     }
 
-
-
-
     //**GET USER PLAYLISTS**
     public void RequestUserPlaylists()
     {
@@ -226,9 +227,6 @@ public class API : MonoBehaviour
             Vector3 newPosition = new Vector3(userPlayListLabel.position.x, userPlayListLabel.position.y + itemMovementAmount, userPlayListLabel.position.z);
             Instantiate(userPlaylistItem, newPosition, userPlayListLabel.rotation);
 
-            //var newItem = Instantiate(userPlaylistItem, newPosition, userPlayListLabel.rotation);
-            //newItem.transform.SetParent(panelCurrentPlaylist.transform);
-
             userPlaylistItem.GetComponent<UserPlaylists_Item>().SetItemInfo(playlistName, playlistURI);
 
             //Debug.Log(itemMovementAmount);
@@ -256,7 +254,7 @@ public class API : MonoBehaviour
         currentPlaylistName = playlistInfoItemResponse["name"];
     }
 
-    //REQUEST CURRENT PLAYLISTINFO (NO LONGER FIRED OFF THE MAIN BUTTONS)
+    //REQUEST CURRENT PLAYLIST TRACKS AND CREATE THEM IN THE LIST (NO LONGER FIRED OFF THE MAIN BUTTONS)
     public void RequestCurrentPlaylistInfo()
     {
         isRequestingPlaylistInfo = true;
@@ -276,7 +274,7 @@ public class API : MonoBehaviour
     {
         yield return www.SendWebRequest();
 
-        Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
+        //Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
         RefreshCurrentPlaylistInfo();
         JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
         //RefreshCurrentPlaylistInfo();
@@ -327,8 +325,8 @@ public class API : MonoBehaviour
     }
 
 
-    //**REQUEST TRACK INFO**
-    public void RequestTrackInfo()
+    //**REQUEST TRACK INFO** (ACTUALLY PLAYER INFORMATION)
+    public void RequestPlayerInfo()
     {
         isRequestingTrackInfo = true;
         //string bodyJsonString = "Body: Info";
@@ -339,10 +337,10 @@ public class API : MonoBehaviour
         www.SetRequestHeader("Content-Type", "application/json");
         www.SetRequestHeader("Accept", "application/json");
 
-        StartCoroutine(ResponseTrackInfo(www));
+        StartCoroutine(ResponsePlayerInfo(www));
     }
 
-    IEnumerator ResponseTrackInfo(UnityWebRequest www)
+    IEnumerator ResponsePlayerInfo(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
 
@@ -356,27 +354,56 @@ public class API : MonoBehaviour
             //Debug.Log(www.downloadHandler.text);
         }
 
-        JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
-        trackInfo = trackInfoResponse["item"]["name"];
-        trackURI = trackInfoResponse["item"]["uri"];
-        //trackArtist = trackInfoResponse["item"]["album"]["artists"]["name"];
-        isPlayingString = trackInfoResponse["is_playing"];
-        currentPlaylist = trackInfoResponse["context"]["uri"];
+        JSONNode playerInfoResponse = JSON.Parse(www.downloadHandler.text);
+        trackInfo = playerInfoResponse["item"]["name"];
+        trackURI = playerInfoResponse["item"]["uri"];
+        isPlayingString = playerInfoResponse["is_playing"];
+        currentPlaylist = playerInfoResponse["context"]["uri"];
 
-        foreach (JSONNode item in trackInfoResponse["item"]["album"]["artists"])
+        deviceID = playerInfoResponse["device"]["id"];
+        shuffleState = playerInfoResponse["shuffle_state"];
+        repeatState = playerInfoResponse["repeat_state"];
+        trackProgress = playerInfoResponse["progress_ms"];
+
+        foreach (JSONNode item in playerInfoResponse["item"]["album"]["artists"])
         {
             trackArtist = item["name"];
-            //string playlistURI = item["uri"];
-            
         }
 
-        //Debug.Log("TRACK NAME: " + trackInfo);
-        //Debug.Log("ARTIST NAME: " + trackArtist);
-        //RequestPlayerInfo();
         isRequestingTrackInfo = false;
     }
 
+    public void RequestTrackInfo()
+    {
+        if(trackURI != null)
+        {
+            trackURI = trackURI.Replace("spotify:track:", "");
+        }
 
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/tracks/" + trackURI);
+        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
+        //www.SetRequestHeader("Content-Type", "application/json");
+        //www.SetRequestHeader("Accept", "application/json");
+
+        StartCoroutine(ResponseTrackInfo(www));
+    }
+
+    IEnumerator ResponseTrackInfo(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+        JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
+        trackDuration = trackInfoResponse["duration_ms"];
+
+        if (www.isNetworkError)
+        {
+            Debug.Log(www.error);
+        }
+
+        else
+        {
+            //Debug.Log(www.downloadHandler.text);
+        }
+    }
 
     // **Playback Button Requests**
 
@@ -575,33 +602,11 @@ public class API : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.2f);
+            //RequestPlayerInfo();
             RequestPlayerInfo();
+            RequestTrackInfo();
         }
-    }
-
-    public void RequestPlayerInfo()
-    {
-        isRequestingPlayerInfo = true;
-        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/me/player");
-        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
-        www.SetRequestHeader("Content-Type", "application/json");
-        www.SetRequestHeader("Accept", "application/json");
-
-        StartCoroutine(ResponsePlayerInfo(www));
-    }
-
-    IEnumerator ResponsePlayerInfo(UnityWebRequest www)
-    {
-        yield return www.SendWebRequest();
-        //Debug.Log(www.downloadHandler.text);
-        JSONNode playerInfoResponse = JSON.Parse(www.downloadHandler.text);
-        deviceID = playerInfoResponse["device"]["id"];
-        shuffleState = playerInfoResponse["shuffle_state"];
-        repeatState = playerInfoResponse["repeat_state"];
-        //Debug.Log(shuffleState);
-        //Debug.Log(repeatState);
-        isRequestingPlayerInfo = false;
     }
 
     public void RepeatButtonRequest(String state)
@@ -651,7 +656,6 @@ public class API : MonoBehaviour
         {
             Debug.Log(www.downloadHandler.text);
         }
-        Debug.Log(shuffleState);
     }
 }
 //-H "Accept: application/json"
