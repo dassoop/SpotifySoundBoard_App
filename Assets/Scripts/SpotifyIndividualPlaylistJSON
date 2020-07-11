@@ -1,4 +1,4 @@
-﻿{
+{
   "collaborative" : false,
   "description" : "a deadpan recontextualisation of glossy corporate music from a small number of artists on the internet reconstructing sound from heavy sampling of popular music &amp; 80s/90s TV ads, looping, slowed down, pitch alterations w/ chop &amp; screw fx",
   "external_urls" :
@@ -34,59 +34,74 @@
   "snapshot_id" : "MTU4NywyZmM1NWU0MWNkNTIwYzQwZGZiMzljNzQ5NmU1YWM1ZjVmZTFlMWJm",
   "tracks" : {
     "href" : "https://api.spotify.com/v1/playlists/17HYiAIcwlDEg5RgVkm4L7/tracks?offset=0&limit=100",
-    "items" : [ {
-      "added_at" : "2013-08-25T19:54:23Z",
-      "added_by" : {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/user/iam3"
-        },
-        "href" : "https://api.spotify.com/v1/users/iam3",
-        "id" : "iam3",
-        "type" : "user",
-        "uri" : "spotify:user:iam3"
-      },
-      "is_local" : false,
-      "primary_color" : null,
-      "track" : {
-        "album" : {
-          "album_type" : "album",
-          "artists" : [ {
-            "external_urls" : {
-              "spotify" : "https://open.spotify.com/artist/0va8U409dr4gA1zQ2gSnD5"
-            },
-            "href" : "https://api.spotify.com/v1/artists/0va8U409dr4gA1zQ2gSnD5",
-            "id" : "0va8U409dr4gA1zQ2gSnD5",
-            "name" : "18 Carat Affair",
-            "type" : "artist",
-            "uri" : "spotify:artist:0va8U409dr4gA1zQ2gSnD5"
-          } ],
-          "available_markets" : [ ],
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/album/1l3ok2CuYB8wWKUTm4jssh"
-          },
-          "href" : "https://api.spotify.com/v1/albums/1l3ok2CuYB8wWKUTm4jssh",
-          "id" : "1l3ok2CuYB8wWKUTm4jssh",
-          "images" : [ {
-            "height" : 640,
-            "url" : "https://i.scdn.co/image/ab67616d0000b2732cc262dd19f5f98eb5ff4c8e",
-            "width" : 640
-          }, {
-            "height" : 300,
-            "url" : "https://i.scdn.co/image/ab67616d00001e022cc262dd19f5f98eb5ff4c8e",
-            "width" : 300
-          }, {
-            "height" : 64,
-            "url" : "https://i.scdn.co/image/ab67616d000048512cc262dd19f5f98eb5ff4c8e",
-            "width" : 64
-          } ],
-          "name" : "Vintage Romance",
-          "release_date" : "2011-07-26",
-          "release_date_precision" : "day",
-          "total_tracks" : 14,
-          "type" : "album",
-          "uri" : "spotify:album:1l3ok2CuYB8wWKUTm4jssh"
-        },
-        "artists" : [ {
+    "items" : 
+	[ {
+      		"added_at" : "2013-08-25T19:54:23Z",
+      		"added_by" : 
+			{
+        			"external_urls" : 
+					{
+          					"spotify" : "https://open.spotify.com/user/iam3"
+        				},
+        			"href" : "https://api.spotify.com/v1/users/iam3",
+        			"id" : "iam3",
+        			"type" : "user",
+        			"uri" : "spotify:user:iam3"
+      			},
+      		"is_local" : false,
+      		"primary_color" : null,
+      		"track" : 
+			{
+       				 "album" : 
+					{
+         			 		"album_type" : "album",
+         	 				"artists" : 
+							[ {
+            							"external_urls" : 
+									{
+             									 "spotify" : "https://open.spotify.com/artist/0va8U409dr4gA1zQ2gSnD5"
+           								},
+            							"href" : "https://api.spotify.com/v1/artists/0va8U409dr4gA1zQ2gSnD5",
+            							"id" : "0va8U409dr4gA1zQ2gSnD5",
+            							"name" : "18 Carat Affair",
+            							"type" : "artist",
+            							"uri" : "spotify:artist:0va8U409dr4gA1zQ2gSnD5"
+          						} ],
+          					"available_markets" : [ ],
+          					"external_urls" : 
+							{
+            							"spotify" : "https://open.spotify.com/album/1l3ok2CuYB8wWKUTm4jssh"
+          						},
+          					"href" : "https://api.spotify.com/v1/albums/1l3ok2CuYB8wWKUTm4jssh",
+          					"id" : "1l3ok2CuYB8wWKUTm4jssh",
+          					"images" : 
+							[ 	
+								{
+            								"height" : 640,
+            								"url" : "https://i.scdn.co/image/ab67616d0000b2732cc262dd19f5f98eb5ff4c8e",
+            								"width" : 640
+          							},
+
+ 								{
+            								"height" : 300,
+            								"url" : "https://i.scdn.co/image/ab67616d00001e022cc262dd19f5f98eb5ff4c8e",
+            								"width" : 300
+         							}, 
+
+								{
+            								"height" : 64,
+            								"url" : "https://i.scdn.co/image/ab67616d000048512cc262dd19f5f98eb5ff4c8e",
+            								"width" : 64
+          							} 
+							],
+          					"name" : "Vintage Romance",
+         			 		"release_date" : "2011-07-26",
+          					"release_date_precision" : "day",
+          					"total_tracks" : 14,
+          					"type" : "album",
+          					"uri" : "spotify:album:1l3ok2CuYB8wWKUTm4jssh"
+       			 		},
+        			"artists" : [ {
           "external_urls" : {
             "spotify" : "https://open.spotify.com/artist/0va8U409dr4gA1zQ2gSnD5"
           },

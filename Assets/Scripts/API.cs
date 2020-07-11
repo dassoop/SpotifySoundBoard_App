@@ -63,7 +63,8 @@ public class API : MonoBehaviour
     public string trackProgress;
     [HideInInspector]
     public string trackDuration;
-
+    [HideInInspector]
+    public string availableMarkets;
 
     private bool isRequestingPlaylistInfo = false;
     private bool isRequestingTrackInfo = false;
@@ -279,7 +280,7 @@ public class API : MonoBehaviour
     {
         yield return www.SendWebRequest();
 
-        //Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
+        Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
         RefreshCurrentPlaylistInfo();
         JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
         //RefreshCurrentPlaylistInfo();
@@ -291,22 +292,27 @@ public class API : MonoBehaviour
         playlistItemCount = 0;
         foreach (JSONNode item in playlistItemResponse["items"])
         {
-            if (playlistItemCount <= 30)
+            if (playlistItemCount < 30)
             {
                 string playlistItemName = item["track"]["name"];
                 string playlistItemURI = item["track"]["uri"];
-                //string playlistName = item["name"];
-                //Debug.Log(playlistName);
 
-                Vector3 newPosition = new Vector3(currentPlaylistLabel.position.x, currentPlaylistLabel.position.y + playlistItemMovementAmount, currentPlaylistLabel.position.z);
-                Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
+                foreach (JSONNode markets in item["track"]["album"]["available_markets"])
+                {
+                    availableMarkets = markets;
+                    Debug.Log(availableMarkets);
+                }
 
-                currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
-                //Debug.Log(playlistItemName);
+                if (availableMarkets != "")
+                {
+                    Vector3 newPosition = new Vector3(currentPlaylistLabel.position.x, currentPlaylistLabel.position.y + playlistItemMovementAmount, currentPlaylistLabel.position.z);
+                    Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
+                    currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
 
-                //Debug.Log("ITEM MOVEMENT AMOUNT: " + playlistItemMovementAmount);
-                playlistItemMovementAmount -= 35;
-                playlistItemCount++;
+                    playlistItemMovementAmount -= 35;
+                    playlistItemCount++;
+                }    
+                //Debug.Log("ITEM MOVEMENT AMOUNT: " + playlistItemMovementAmount);   
                 //Debug.Log("PARSING " + playlistItemCount);
             }
         }
@@ -565,7 +571,7 @@ public class API : MonoBehaviour
 
         else
         {
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
         }
 
         //RefreshCurrentPlaylistInfo();
