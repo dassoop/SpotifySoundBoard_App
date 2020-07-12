@@ -6,15 +6,17 @@ using UnityEngine.UI;
 
 public class TrackDuration : MonoBehaviour
 {
-    private float durationFloat;
-    private float progressFloat;
+    private float durationFloat = 1;
+    private float progressFloat = 0;
 
     void Update()
     {
-        durationFloat = float.Parse(API.instance.trackDuration, CultureInfo.InvariantCulture);
-        progressFloat = float.Parse(API.instance.trackProgress, CultureInfo.InvariantCulture);
-
-        gameObject.GetComponent<Slider>().maxValue = durationFloat;
-        gameObject.GetComponent<Slider>().value = progressFloat;
+        if (API.instance.trackProgress != null && API.instance.trackDuration != null)
+        {
+            durationFloat = float.Parse(API.instance.trackDuration, CultureInfo.InvariantCulture);
+            progressFloat = float.Parse(API.instance.trackProgress, CultureInfo.InvariantCulture);
+        }
+            gameObject.GetComponent<Slider>().maxValue = durationFloat;
+            gameObject.GetComponent<Slider>().value = progressFloat;
     }
 }

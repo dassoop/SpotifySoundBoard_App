@@ -7,9 +7,11 @@ public class MainButton : MonoBehaviour
 {
 	public API api;
 	public GameObject buttonGreen;
+	public Slider slider;
     public Text activePlaylistText;
     public string activePlaylistName;
     public string activePlaylistURI;
+	public int activePlaylistFirstTrackDuration;
     public bool isActive;
 
     public UserPlaylists_Item userPlaylistsItem;
@@ -31,7 +33,7 @@ public class MainButton : MonoBehaviour
 	{
 		//Debug.Log("Start Playlist: " + activePlaylistName);
 		//Debug.Log("uri: " + activePlaylistURI);
-		API.instance.StartPlaylistRequest(activePlaylistURI);
+		API.instance.StartPlaylistRequest(activePlaylistURI, (int)slider.value);
         //api.RequestCurrentPlaylistInfo();
     }
 }

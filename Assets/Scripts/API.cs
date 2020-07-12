@@ -26,6 +26,8 @@ public class API : MonoBehaviour
     public CurrentPlaylist_Item currentPlaylistItemPrefab;
 
     [HideInInspector]
+    public int trackStartPosition;
+    [HideInInspector]
     public float itemMovementAmount = -35;
     [HideInInspector]
     public float playlistItemMovementAmount = -35;
@@ -36,7 +38,7 @@ public class API : MonoBehaviour
     public bool isTrackChanging;
 
     private string authCode;
-    private string accessToken;
+    public string accessToken;
 
     //String from Spotify JSON
     [HideInInspector]
@@ -572,10 +574,11 @@ public class API : MonoBehaviour
     }
 
     //**START PLAYLIST REQUEST**
-    public void StartPlaylistRequest(string playlistURI)
+    public void StartPlaylistRequest(string playlistURI, int trackStartPosition)
     {
         PlaylistForm playlistForm = new PlaylistForm();
         playlistForm.context_uri = playlistURI;
+        playlistForm.position_ms = trackStartPosition;
         string bodyRaw = JsonUtility.ToJson(playlistForm);
         //Debug.Log(bodyRaw);
 
@@ -598,7 +601,7 @@ public class API : MonoBehaviour
 
         else
         {
-            //Debug.Log(www.downloadHandler.text);
+            Debug.Log(www.downloadHandler.text);
         }
 
         //RefreshCurrentPlaylistInfo();

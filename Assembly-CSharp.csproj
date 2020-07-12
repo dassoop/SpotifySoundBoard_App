@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\LoginPrompt.cs" />
     <Compile Include="Assets\Scripts\MainButton.cs" />
     <Compile Include="Assets\Scripts\PlaylistForm.cs" />
+    <Compile Include="Assets\Scripts\SliderButton.cs" />
     <Compile Include="Assets\Scripts\TrackDuration.cs" />
     <Compile Include="Assets\Scripts\TrackForm.cs" />
     <Compile Include="Assets\Scripts\UserPlaylists_Item.cs" />

@@ -22,6 +22,5 @@ public class InfoDisplayController : MonoBehaviour
         trackArtistDisplay.text = api.trackArtist;
         userPlaylists.text = api.userPlaylistsString;
         currentPlaylistDisplay.text = api.currentPlaylistName;
-        //Debug.Log(api.trackArtist);
     }
 }
