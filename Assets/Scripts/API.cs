@@ -65,6 +65,8 @@ public class API : MonoBehaviour
     public string trackDuration;
     [HideInInspector]
     public string availableMarkets;
+    [HideInInspector]
+    public string userRegion;
 
     private bool isRequestingPlaylistInfo = false;
     private bool isRequestingTrackInfo = false;
@@ -111,12 +113,14 @@ public class API : MonoBehaviour
         if (trackInfo != previousTrackInfo)
         {
             //Debug.Log("SONG CHANGED");
+
             isTrackChanging = true;
             RequestPlaylistInfo();
             RequestCurrentPlaylistInfo();
             previousTrackInfo = trackInfo;
         }
         previousTrackInfo = trackInfo;
+
 
         if (isPlayingString == "True")
         {
@@ -126,15 +130,6 @@ public class API : MonoBehaviour
         {
             isTrackPlaying = false;
         }
-
-        //if (isRequestingPlaylistInfo == false)
-        //{
-        //    RequestCurrentPlaylistInfo();
-        //}
-        //else
-        //{
-
-        //}
     }
 
     //**Request Access Token with Code**
@@ -182,6 +177,7 @@ public class API : MonoBehaviour
         textInput.SetActive(false);
         textConnected.SetActive(true);
         RequestUserPlaylists();
+        RequestUserInfo();
         //RequestTrackInfo();
         //RequestCurrentPlaylistInfo();
     }
@@ -191,6 +187,26 @@ public class API : MonoBehaviour
     {
         authCode = textInput.GetComponent<InputField>().text;
         Request();
+    }
+
+    //**REQUEST USER INFO (LIKE LOCATION AND PERMISSIONS)
+    public void RequestUserInfo()
+    {
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/me");
+        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
+        //www.SetRequestHeader("Content-Type", "application/json");
+        //www.SetRequestHeader("Accept", "application/json");
+
+        StartCoroutine(ResponseUserInfo(www));
+    }
+
+    IEnumerator ResponseUserInfo(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        JSONNode userResponseInfo  = JSON.Parse(www.downloadHandler.text);
+        userRegion = userResponseInfo["country"];
+        Debug.Log("REGION: " + userRegion);
     }
 
     //**GET USER PLAYLISTS**
@@ -290,28 +306,39 @@ public class API : MonoBehaviour
     public void ParsePlaylistItemResponse(JSONNode playlistItemResponse)
     {
         playlistItemCount = 0;
+
         foreach (JSONNode item in playlistItemResponse["items"])
         {
+            bool isAvailableInRegion = false;
+
             if (playlistItemCount < 30)
             {
-                string playlistItemName = item["track"]["name"];
-                string playlistItemURI = item["track"]["uri"];
-
                 foreach (JSONNode markets in item["track"]["album"]["available_markets"])
                 {
                     availableMarkets = markets;
-                    Debug.Log(availableMarkets);
+
+                    if (availableMarkets == userRegion)
+                    {
+                        isAvailableInRegion = true;
+                    }
                 }
 
-                if (availableMarkets != "")
+                if (!isAvailableInRegion)
                 {
-                    Vector3 newPosition = new Vector3(currentPlaylistLabel.position.x, currentPlaylistLabel.position.y + playlistItemMovementAmount, currentPlaylistLabel.position.z);
-                    Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
-                    currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
+                    continue;
+                }
 
-                    playlistItemMovementAmount -= 35;
-                    playlistItemCount++;
-                }    
+                string playlistItemName = item["track"]["name"];
+                string playlistItemURI = item["track"]["uri"];
+
+                Vector3 newPosition = new Vector3(currentPlaylistLabel.position.x, currentPlaylistLabel.position.y + playlistItemMovementAmount, currentPlaylistLabel.position.z);
+                
+                currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
+                Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
+
+                playlistItemMovementAmount -= 35;
+                playlistItemCount++;
+
                 //Debug.Log("ITEM MOVEMENT AMOUNT: " + playlistItemMovementAmount);   
                 //Debug.Log("PARSING " + playlistItemCount);
             }

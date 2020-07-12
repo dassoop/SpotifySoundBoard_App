@@ -76,9 +76,9 @@
     <Compile Include="Assets\Scripts\LoginPrompt.cs" />
     <Compile Include="Assets\Scripts\MainButton.cs" />
     <Compile Include="Assets\Scripts\PlaylistForm.cs" />
+    <Compile Include="Assets\Scripts\TrackDuration.cs" />
     <Compile Include="Assets\Scripts\TrackForm.cs" />
     <Compile Include="Assets\Scripts\UserPlaylists_Item.cs" />
-    <Compile Include="Assets\TrackDuration.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/lancemac/Documents/GitRepositories/SpotifySoundboardApp/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

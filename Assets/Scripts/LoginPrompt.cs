@@ -11,7 +11,8 @@ public class LoginPrompt : MonoBehaviour
 
     //private string URL = "https://accounts.spotify.com/authorize?client_id=ef6bfa33a6644af9a8faa584319caeb4&response_type=code&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&scope=user-read-private%20user-read-email&state=34fFs29kd09";
     //private string URL = "https://accounts.spotify.com/authorize?client_id=ef6bfa33a6644af9a8faa584319caeb4&response_type=code&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&scope=user-read-private%20user-read-email%20user-modify-playback-state%20user-read-playback-state%20playlist-read-private%20playlist-read-collaborative&state=34fFs29kd09";
-    private string URL = "https://accounts.spotify.com/authorize?client_id=ef6bfa33a6644af9a8faa584319caeb4&response_type=code&redirect_uri=https%3A%2F%2Fspotifysoundboard.herokuapp.com%2Fcallback&scope=user-read-private%20user-read-email%20user-modify-playback-state%20user-read-playback-state%20playlist-read-private%20playlist-read-collaborative&state=34fFs29kd09";
+    //private string URL = "https://accounts.spotify.com/authorize?client_id=ef6bfa33a6644af9a8faa584319caeb4&response_type=code&redirect_uri=https%3A%2F%2Fspotifysoundboard.herokuapp.com%2Fcallback&scope=user-read-private%20user-read-email%20user-modify-playback-state%20user-read-playback-state%20playlist-read-private%20playlist-read-collaborative&state=34fFs29kd09";
+    private string URL = "https://accounts.spotify.com/authorize?client_id=ef6bfa33a6644af9a8faa584319caeb4&response_type=code&redirect_uri=https%3A%2F%2Fspotifysoundboard.herokuapp.com%2Fcallback&scope=user-read-private%20user-read-email%20user-modify-playback-state%20user-read-playback-state%20playlist-read-private%20playlist-read-collaborative%20user-read-private%20user-read-email&state=34fFs29kd09";
 
     public void Awake()
     {
