@@ -18,6 +18,7 @@ public class MainButton : MonoBehaviour
     public int volume;
     public bool isActive;
     public bool fadeInButtonIsActive = false;
+    public bool isFadingIn = false;
 
     public UserPlaylists_Item userPlaylistsItem;
 
@@ -59,6 +60,7 @@ public class MainButton : MonoBehaviour
 
     IEnumerator VolumeFadeIn()
     {
+        API.instance.isFadingIn = true;
         volume = 0;
         while(volume < 101)
         {
@@ -68,6 +70,8 @@ public class MainButton : MonoBehaviour
             Debug.Log(volume);
         }
         volume = 100;
+        API.instance.isFadingIn = false;
+        Debug.Log("FADE DONE");
     }
 
     public void ChangeVolumeRequest()

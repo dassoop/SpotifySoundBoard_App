@@ -122,6 +122,6 @@ public class UserPlaylists_Item : MonoBehaviour
         JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
         trackDuration = trackInfoResponse["duration_ms"];
         SendInfoToPlayButton();
-        Debug.Log(trackDuration);
+        Debug.Log("TRACK DURATION: " + trackDuration);
     }
 }

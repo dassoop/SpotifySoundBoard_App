@@ -36,6 +36,8 @@ public class API : MonoBehaviour
     public bool isTrackPlaying;
     [HideInInspector]
     public bool isTrackChanging;
+    [HideInInspector]
+    public bool isFadingIn = false;
 
     private string authCode;
     public string accessToken;
@@ -115,7 +117,6 @@ public class API : MonoBehaviour
         if (trackInfo != previousTrackInfo)
         {
             //Debug.Log("SONG CHANGED");
-
             isTrackChanging = true;
             RequestPlaylistInfo();
             RequestCurrentPlaylistInfo();
@@ -644,10 +645,10 @@ public class API : MonoBehaviour
     {
         while (true)
         {
-            //RequestPlayerInfo();
             RequestPlayerInfo();
             RequestTrackInfo();
-            yield return new WaitForSeconds(.6f);
+            //RequestPlayerInfo();
+            yield return new WaitForSeconds(.2f);
         }
     }
 
