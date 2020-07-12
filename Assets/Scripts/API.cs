@@ -145,7 +145,8 @@ public class API : MonoBehaviour
 
         UnityWebRequest www = UnityWebRequest.Post(URL, form);
 
-        byte[] bytesToEncode = Encoding.UTF8.GetBytes("ef6bfa33a6644af9a8faa584319caeb4:94ec513e49cf472892006983735503fc");
+        //byte[] bytesToEncode = Encoding.UTF8.GetBytes("ef6bfa33a6644af9a8faa584319caeb4:94ec513e49cf472892006983735503fc");
+        byte[] bytesToEncode = Encoding.UTF8.GetBytes(clientID + ":" + clientSecret);
         string encodedText = Convert.ToBase64String(bytesToEncode);
 
         www.SetRequestHeader("Authorization", "Basic " + encodedText);
