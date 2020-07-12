@@ -189,7 +189,9 @@ public class API : MonoBehaviour
     //Set Access Code equal to the code pasted into the text field
     public void SetCode()
     {
-        authCode = textInput.GetComponent<InputField>().text;
+        //authCode = textInput.GetComponent<InputField>().text;
+        authCode = GUIUtility.systemCopyBuffer;
+        Debug.Log(authCode);
         Request();
     }
 

@@ -2388,6 +2388,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &293765610
@@ -3208,7 +3209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &441179703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,6 +3403,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &453213805
@@ -4052,6 +4054,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &508201838
@@ -5683,6 +5686,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &675660826
@@ -9016,6 +9020,7 @@ MonoBehaviour:
   playlistItemMovementAmount: -35
   isTrackPlaying: 0
   isTrackChanging: 0
+  isFadingIn: 0
   accessToken: 
   trackInfo: 
   previousTrackInfo: 
@@ -11502,7 +11507,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Authorize
+  m_Text: 'Connect
 
 '
 --- !u!222 &1449086886
@@ -12936,6 +12941,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &1623185477
@@ -14402,6 +14408,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &1747713676
@@ -15633,6 +15640,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &1955689321
@@ -16269,6 +16277,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &2014972659
@@ -17179,6 +17188,7 @@ MonoBehaviour:
   volume: 0
   isActive: 0
   fadeInButtonIsActive: 0
+  isFadingIn: 0
   userPlaylistsItem: {fileID: 5977549206343038652, guid: 12137bc8f80744b95a4a32a9c95957f1,
     type: 3}
 --- !u!114 &2114249234
