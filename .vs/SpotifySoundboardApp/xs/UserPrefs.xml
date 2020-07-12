@@ -1,14 +1,27 @@
 ﻿<Properties StartupConfiguration="{7900B1A6-24ED-41F1-1500-43595DB93EEE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UserPlaylists_Item.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainButton.cs">
     <Files>
-      <File FileName="Assets/Scripts/API.cs" Line="604" Column="49" />
-      <File FileName="Assets/Scripts/MainButton.cs" Line="14" Column="46" />
-      <File FileName="Assets/Scripts/UserPlaylists_Item.cs" Line="90" Column="6" />
+      <File FileName="Assets/Scripts/API.cs" Line="628" Column="6" />
+      <File FileName="Assets/Scripts/MainButton.cs" Line="70" Column="22" />
+      <File FileName="Assets/Scripts/SliderButton.cs" Line="16" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SpotifySoundboardApp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="MainButton.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9fcd2ef6-aa2e-474e-b051-02e016adf5cc" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="050843e8-3e6e-4932-97af-dbf1737021e9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/lancemac/Documents/GitRepositories/SpotifySoundboardApp/Assets/Scripts/TrackDuration.cs" relfile="Assets/Scripts/TrackDuration.cs" line="5" column="1" />
