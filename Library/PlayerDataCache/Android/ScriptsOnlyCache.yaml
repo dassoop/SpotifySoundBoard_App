@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - InfoDisplayController
     - LoginPrompt
     - MainButton
+    - SliderButton
     - TrackDuration
     - UserPlaylists_Item
     UnityEditor.TestRunner.dll:
@@ -90,13 +91,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9982}
     - Class: 114
-      Script: {instanceID: 10370}
+      Script: {instanceID: 10016}
     - Class: 114
-      Script: {instanceID: 10386}
+      Script: {instanceID: 10372}
     - Class: 114
-      Script: {instanceID: 10560}
+      Script: {instanceID: 10388}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10562}
+    - Class: 114
+      Script: {instanceID: 10600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -566,7 +569,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: d0e98d7c6bd87ddccba9d4de2f7adbb5
+      Hash: ae86a258adcba18a2861be9d3adf7a53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainButton
@@ -578,7 +581,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 1d13d9d2d6acf03f6eb59ae72a649fbe
+      Hash: b47907b81c53cd21cb114e3ececd1f8f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: API
@@ -684,6 +687,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: d11f315dd5237500c7661d2198eb8cfe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SliderButton
   - hash:
       serializedVersion: 2
       Hash: 3f8d7b92a6be3c715e55d5cfa7cc8384
@@ -824,7 +833,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: aa455129ba91e649f8cb226cabcfcb38
+      Hash: d9a7096b0cedefe28b98175d6126bf91
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UserPlaylists_Item
@@ -837,4 +846,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard.apk
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v1.0.apk
