@@ -16,6 +16,7 @@ public class API : MonoBehaviour
     public GameObject textInput;
     public GameObject authorizeButton;
     public GameObject textConnected;
+    public GameObject textNonPremiumAccount;
     public GameObject userPlaylistItem;
     public GameObject currentPlaylistItem;
     public GameObject panelCurrentPlaylist;
@@ -71,6 +72,10 @@ public class API : MonoBehaviour
     public string availableMarkets;
     [HideInInspector]
     public string userRegion;
+    [HideInInspector]
+    public string userID;
+    [HideInInspector]
+    public string userPremiumStatus;
 
     private bool isRequestingPlaylistInfo = false;
     private bool isRequestingTrackInfo = false;
@@ -179,7 +184,7 @@ public class API : MonoBehaviour
 
         authorizeButton.SetActive(false);
         textInput.SetActive(false);
-        textConnected.SetActive(true);
+        //textConnected.SetActive(true);
         RequestUserPlaylists();
         RequestUserInfo();
         //RequestTrackInfo();
@@ -212,7 +217,19 @@ public class API : MonoBehaviour
 
         JSONNode userResponseInfo  = JSON.Parse(www.downloadHandler.text);
         userRegion = userResponseInfo["country"];
-        Debug.Log("REGION: " + userRegion);
+        userID = userResponseInfo["display_name"];
+        userPremiumStatus = userResponseInfo["product"];
+        Debug.Log(www.downloadHandler.text);
+
+        if (userPremiumStatus != "premium")
+        {
+            textNonPremiumAccount.SetActive(true);
+        }
+
+        else
+        {
+            textConnected.SetActive(true);
+        }
     }
 
     //**GET USER PLAYLISTS**
@@ -253,9 +270,8 @@ public class API : MonoBehaviour
             userPlaylistsString = playlistName;
 
             Vector3 newPosition = new Vector3(userPlayListLabel.position.x, userPlayListLabel.position.y + itemMovementAmount, userPlayListLabel.position.z);
-            Instantiate(userPlaylistItem, newPosition, userPlayListLabel.rotation);
-
             userPlaylistItem.GetComponent<UserPlaylists_Item>().SetItemInfo(playlistName, playlistURI);
+            Instantiate(userPlaylistItem, newPosition, userPlayListLabel.rotation);
 
             //Debug.Log(itemMovementAmount);
             itemMovementAmount -= 35;

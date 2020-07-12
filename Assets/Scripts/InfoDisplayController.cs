@@ -10,6 +10,7 @@ public class InfoDisplayController : MonoBehaviour
     public Text playlistURIDisplay;
     public Text userPlaylists;
     public Text currentPlaylistDisplay;
+    public Text userIDDisplay;
 
 
     public API api;
@@ -22,5 +23,6 @@ public class InfoDisplayController : MonoBehaviour
         trackArtistDisplay.text = api.trackArtist;
         userPlaylists.text = api.userPlaylistsString;
         currentPlaylistDisplay.text = api.currentPlaylistName;
+        userIDDisplay.text = api.userID;
     }
 }
