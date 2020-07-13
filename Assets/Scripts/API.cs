@@ -71,6 +71,8 @@ public class API : MonoBehaviour
     [HideInInspector]
     public string availableMarkets;
     [HideInInspector]
+    public string currentTrackAvailableMarket;
+    [HideInInspector]
     public string userRegion;
     [HideInInspector]
     public string userID;
@@ -451,8 +453,14 @@ public class API : MonoBehaviour
     IEnumerator ResponseTrackInfo(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
+        Debug.Log("TRACK INFO: " + www.downloadHandler.text);
         JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
         trackDuration = trackInfoResponse["duration_ms"];
+
+        foreach(JSONNode market in trackInfoResponse["available_markets"])
+        {
+            Debug.Log(market);
+        }
 
         if (www.isNetworkError)
         {
