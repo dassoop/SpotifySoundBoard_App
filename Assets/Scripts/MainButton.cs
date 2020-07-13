@@ -65,8 +65,8 @@ public class MainButton : MonoBehaviour
         while(volume < 101)
         {
             ChangeVolumeRequest();
-            yield return new WaitForSeconds(.03f);
-            volume++;
+            yield return new WaitForSeconds(.15f);
+            volume += 5;
             Debug.Log(volume);
         }
         volume = 100;
