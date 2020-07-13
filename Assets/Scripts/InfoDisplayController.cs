@@ -11,6 +11,7 @@ public class InfoDisplayController : MonoBehaviour
     public Text userPlaylists;
     public Text currentPlaylistDisplay;
     public Text userIDDisplay;
+    public Text userRegionDisplay;
 
 
     public API api;
@@ -24,5 +25,6 @@ public class InfoDisplayController : MonoBehaviour
         userPlaylists.text = api.userPlaylistsString;
         currentPlaylistDisplay.text = api.currentPlaylistName;
         userIDDisplay.text = api.userID;
+        userRegionDisplay.text = api.userRegion;
     }
 }

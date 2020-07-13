@@ -310,7 +310,7 @@ public class API : MonoBehaviour
             currentPlaylist = currentPlaylist.Replace("spotify:playlist:", "");
         }
         //UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=6");
-        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/tracks?limit=30");
+        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/playlists/" + currentPlaylist + "/tracks?market=" + userRegion + "&limit=30");
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
         StartCoroutine(ResponseCurrentPlaylistInfo(www));
@@ -333,38 +333,24 @@ public class API : MonoBehaviour
 
         foreach (JSONNode item in playlistItemResponse["items"])
         {
-            bool isAvailableInRegion = false;
 
             if (playlistItemCount < 30)
             {
-                foreach (JSONNode markets in item["track"]["album"]["available_markets"])
-                {
-                    availableMarkets = markets;
+                string playlistItemName = item["track"]["name"];
+                string playlistItemURI = item["track"]["uri"];
+                bool playlistItemIsPlayable = item["track"]["is_playable"];
 
-                    if (availableMarkets == userRegion)
-                    {
-                        isAvailableInRegion = true;
-                    }
-                }
-
-                if (!isAvailableInRegion)
+                if (!playlistItemIsPlayable)
                 {
                     continue;
                 }
 
-                string playlistItemName = item["track"]["name"];
-                string playlistItemURI = item["track"]["uri"];
-
                 Vector3 newPosition = new Vector3(currentPlaylistLabel.position.x, currentPlaylistLabel.position.y + playlistItemMovementAmount, currentPlaylistLabel.position.z);
-                
                 currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
                 Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
 
                 playlistItemMovementAmount -= 35;
                 playlistItemCount++;
-
-                //Debug.Log("ITEM MOVEMENT AMOUNT: " + playlistItemMovementAmount);   
-                //Debug.Log("PARSING " + playlistItemCount);
             }
         }
         isRequestingPlaylistInfo = false;
@@ -453,14 +439,9 @@ public class API : MonoBehaviour
     IEnumerator ResponseTrackInfo(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
-        Debug.Log("TRACK INFO: " + www.downloadHandler.text);
+        //Debug.Log("TRACK INFO: " + www.downloadHandler.text);
         JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
         trackDuration = trackInfoResponse["duration_ms"];
-
-        foreach(JSONNode market in trackInfoResponse["available_markets"])
-        {
-            Debug.Log(market);
-        }
 
         if (www.isNetworkError)
         {

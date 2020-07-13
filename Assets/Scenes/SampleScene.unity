@@ -2081,11 +2081,11 @@ RectTransform:
   m_LocalScale: {x: 2.549536, y: 2.549536, z: 2.549536}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 12
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538.4, y: 447.1}
+  m_AnchoredPosition: {x: 538.4, y: 491}
   m_SizeDelta: {x: 177.1, y: 26.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264494978
@@ -2437,7 +2437,7 @@ RectTransform:
   - {fileID: 1021166073}
   - {fileID: 1636458283}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3452,7 +3452,7 @@ RectTransform:
   - {fileID: 1995120923}
   - {fileID: 551581980}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3609,7 +3609,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4103,7 +4103,7 @@ RectTransform:
   - {fileID: 761432919}
   - {fileID: 242329766}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4764,7 +4764,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 0
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4789,6 +4789,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!114 &553343079
 MonoBehaviour:
@@ -5736,7 +5737,7 @@ RectTransform:
   - {fileID: 1720771970}
   - {fileID: 595389375}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6755,7 +6756,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6780,6 +6781,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!114 &815786114
 MonoBehaviour:
@@ -7107,6 +7109,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830569449}
+  m_CullTransparentMesh: 0
+--- !u!1 &831863077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831863078}
+  - component: {fileID: 831863080}
+  - component: {fileID: 831863079}
+  m_Layer: 0
+  m_Name: Text_UserCountry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &831863078
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831863077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.549536, y: 2.549536, z: 2.549536}
+  m_Children: []
+  m_Father: {fileID: 1729007027}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 538.4, y: 447}
+  m_SizeDelta: {x: 177.1, y: 26.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &831863079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831863077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: User Country
+--- !u!222 &831863080
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831863077}
   m_CullTransparentMesh: 0
 --- !u!1 &841559186
 GameObject:
@@ -7462,7 +7543,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7487,6 +7568,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!114 &895177380
 MonoBehaviour:
@@ -8709,7 +8791,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9197,6 +9279,7 @@ MonoBehaviour:
   trackProgress: 
   trackDuration: 
   availableMarkets: 
+  currentTrackAvailableMarket: 
   userRegion: 
   userID: 
   userPremiumStatus: 
@@ -9246,7 +9329,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9271,6 +9354,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!114 &1102624923
 MonoBehaviour:
@@ -9904,7 +9988,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9929,6 +10013,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!114 &1200300536
 MonoBehaviour:
@@ -13028,7 +13113,7 @@ RectTransform:
   - {fileID: 916151346}
   - {fileID: 1381325396}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14379,7 +14464,6 @@ Transform:
   m_LocalPosition: {x: -155.84857, y: 8.721619, z: -113.7554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 553343077}
   - {fileID: 895177378}
   - {fileID: 2040975476}
   - {fileID: 1833896123}
@@ -14388,10 +14472,12 @@ Transform:
   - {fileID: 1200300534}
   - {fileID: 1038737377}
   - {fileID: 1102624921}
-  - {fileID: 454153846}
+  - {fileID: 264494977}
+  - {fileID: 831863078}
   - {fileID: 50559534}
   - {fileID: 1074328993}
-  - {fileID: 264494977}
+  - {fileID: 454153846}
+  - {fileID: 553343077}
   - {fileID: 1623185475}
   - {fileID: 1955689319}
   - {fileID: 453213803}
@@ -14422,6 +14508,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 1038737378}
   currentPlaylistDisplay: {fileID: 2040975478}
   userIDDisplay: {fileID: 264494978}
+  userRegionDisplay: {fileID: 831863079}
   api: {fileID: 1097517032}
 --- !u!1 &1736350271
 GameObject:
@@ -14497,7 +14584,7 @@ RectTransform:
   - {fileID: 817551194}
   - {fileID: 748007533}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14996,7 +15083,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15021,6 +15108,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!114 &1833896125
 MonoBehaviour:
@@ -15651,7 +15739,7 @@ RectTransform:
   - {fileID: 1231623669}
   - {fileID: 486773898}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16288,7 +16376,7 @@ RectTransform:
   - {fileID: 1719426413}
   - {fileID: 203271649}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16776,7 +16864,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16801,6 +16889,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!114 &2040975478
 MonoBehaviour:
@@ -16875,7 +16964,7 @@ RectTransform:
   m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
   m_Children: []
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16942,6 +17031,7 @@ MonoBehaviour:
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
   userIDDisplay: {fileID: 0}
+  userRegionDisplay: {fileID: 0}
   api: {fileID: 1097517032}
 --- !u!1 &2084465809
 GameObject:
@@ -17201,7 +17291,7 @@ RectTransform:
   - {fileID: 1640089460}
   - {fileID: 1555472767}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
