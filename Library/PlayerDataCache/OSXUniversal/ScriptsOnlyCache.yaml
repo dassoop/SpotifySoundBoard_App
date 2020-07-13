@@ -106,8 +106,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -371,7 +369,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 7fe128695feb7824c8d046fb9cbc90f2
+      Hash: 4c50aa29ecf5d21c811b25d4755c6eb8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InfoDisplayController
@@ -569,7 +567,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: ae86a258adcba18a2861be9d3adf7a53
+      Hash: f852dce7dff531b5cd497edb8aa81919
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainButton
@@ -581,7 +579,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: b47907b81c53cd21cb114e3ececd1f8f
+      Hash: 192e3dc200a6e4275da6e7cdbe4c0c7c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: API
@@ -846,4 +844,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v1.0.app
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.2.app
