@@ -38,8 +38,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -52.4, y: 68.1}
-  m_SizeDelta: {x: 226.3, y: 22.7}
+  m_AnchoredPosition: {x: 230, y: -162}
+  m_SizeDelta: {x: 146.3, y: 29.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5977549206343038642
 CanvasRenderer:
@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlistName: Tool
   playlistURI: spotify:playlist:0dkhkhO5sS6Tg2foKNwZgb
+  playlistID: 
   trackURI: 
   trackName: 
   trackDuration: 0
@@ -201,8 +202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: -1.65}
-  m_SizeDelta: {x: 269.7, y: 21.7}
+  m_AnchoredPosition: {x: -0.000016212, y: -0.0000035763}
+  m_SizeDelta: {x: 146.3, y: 29.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4937822894644890464
 CanvasRenderer:

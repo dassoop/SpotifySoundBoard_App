@@ -276,7 +276,7 @@ public class API : MonoBehaviour
             Instantiate(userPlaylistItem, newPosition, userPlayListLabel.rotation);
 
             //Debug.Log(itemMovementAmount);
-            itemMovementAmount -= 35;
+            //itemMovementAmount -= 35;
         }
     }
     //REQUEST SINGLE PLAYLIST INFORMATION LIKE NAME
