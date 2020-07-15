@@ -12,6 +12,7 @@ public class InfoDisplayController : MonoBehaviour
     public Text currentPlaylistDisplay;
     public Text userIDDisplay;
     public Text userRegionDisplay;
+    public Text connectedDevice;
 
 
     public API api;
@@ -26,5 +27,6 @@ public class InfoDisplayController : MonoBehaviour
         currentPlaylistDisplay.text = api.currentPlaylistName;
         userIDDisplay.text = api.userID;
         userRegionDisplay.text = api.userRegion;
+        connectedDevice.text = api.connectedDeviceName;
     }
 }

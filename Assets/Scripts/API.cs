@@ -81,6 +81,8 @@ public class API : MonoBehaviour
     public string userID;
     [HideInInspector]
     public string userPremiumStatus;
+    [HideInInspector]
+    public string connectedDeviceName;
 
     public bool isRequestingPlaylistInfo = false;
     public bool isRequestingTrackInfo = false;
@@ -415,6 +417,7 @@ public class API : MonoBehaviour
             currentPlaylist = playerInfoResponse["context"]["uri"];
 
             deviceID = playerInfoResponse["device"]["id"];
+            connectedDeviceName = playerInfoResponse["device"]["name"];
             shuffleState = playerInfoResponse["shuffle_state"];
             repeatState = playerInfoResponse["repeat_state"];
             trackProgress = playerInfoResponse["progress_ms"];
@@ -424,6 +427,11 @@ public class API : MonoBehaviour
                 {
                     trackArtist = item["name"];
                 }
+        }
+
+        else
+        {
+            connectedDeviceName = "No device connected";
         }
 
 
