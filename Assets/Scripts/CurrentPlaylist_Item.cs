@@ -16,7 +16,7 @@ public class CurrentPlaylist_Item : MonoBehaviour
     {
         //Set Parent To Canvas
         //gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
-        gameObject.transform.SetParent(GameObject.Find("CurrentPlaylistContent").transform);
+        gameObject.transform.SetParent(GameObject.Find("Content_CurrentPlaylist").transform);
 
         if (playlistItemURI == API.instance.trackURI)
         {

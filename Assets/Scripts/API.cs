@@ -329,7 +329,7 @@ public class API : MonoBehaviour
 
     public void ParsePlaylistItemResponse(JSONNode playlistItemResponse)
     {
-        playlistItemCount = 0;
+        //playlistItemCount = 0;
 
         foreach (JSONNode item in playlistItemResponse["items"])
         {
@@ -349,8 +349,8 @@ public class API : MonoBehaviour
                 currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
                 Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
 
-                playlistItemMovementAmount -= 35;
-                playlistItemCount++;
+                //playlistItemMovementAmount -= 35;
+                //playlistItemCount++;
             }
         }
         isRequestingPlaylistInfo = false;
