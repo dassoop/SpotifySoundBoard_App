@@ -329,7 +329,7 @@ public class API : MonoBehaviour
 
     public void ParsePlaylistItemResponse(JSONNode playlistItemResponse)
     {
-        //playlistItemCount = 0;
+        playlistItemCount = 0;
 
         foreach (JSONNode item in playlistItemResponse["items"])
         {
@@ -350,7 +350,7 @@ public class API : MonoBehaviour
                 Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
 
                 //playlistItemMovementAmount -= 35;
-                //playlistItemCount++;
+                playlistItemCount++;
             }
         }
         isRequestingPlaylistInfo = false;
@@ -368,7 +368,7 @@ public class API : MonoBehaviour
             Destroy(gameObjects[i]);
         }
         //RequestCurrentPlaylistInfo();
-        playlistItemMovementAmount = -35;
+        //playlistItemMovementAmount = -35;
         playlistItemCount = 0;
     }
 
