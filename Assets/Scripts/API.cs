@@ -33,6 +33,9 @@ public class API : MonoBehaviour
     [HideInInspector]
     public float playlistItemMovementAmount = -35;
 
+
+    [HideInInspector]
+    public bool isConnected = false;
     [HideInInspector]
     public bool isTrackPlaying;
     [HideInInspector]
@@ -79,9 +82,9 @@ public class API : MonoBehaviour
     [HideInInspector]
     public string userPremiumStatus;
 
-    private bool isRequestingPlaylistInfo = false;
-    private bool isRequestingTrackInfo = false;
-    private bool isRequestingPlayerInfo = false;
+    public bool isRequestingPlaylistInfo = false;
+    public bool isRequestingTrackInfo = false;
+    public bool isRequestingPlayerInfo = false;
 
     private string URL = "https://accounts.spotify.com/api/token";
 
@@ -123,11 +126,14 @@ public class API : MonoBehaviour
 
         if (trackInfo != previousTrackInfo)
         {
-            //Debug.Log("SONG CHANGED");
-            isTrackChanging = true;
-            RequestPlaylistInfo();
-            RequestCurrentPlaylistInfo();
-            previousTrackInfo = trackInfo;
+            if(isConnected)
+            {
+                //Debug.Log("SONG CHANGED");
+                isTrackChanging = true;
+                RequestPlaylistInfo();
+                RequestCurrentPlaylistInfo();
+                previousTrackInfo = trackInfo;
+            }
         }
         previousTrackInfo = trackInfo;
 
@@ -175,7 +181,6 @@ public class API : MonoBehaviour
             // Show results as text
             //Debug.Log(www.downloadHandler.text);
             //Debug.Log(www.responseCode);
-
             // Or retrieve results as binary data
             byte[] results = www.downloadHandler.data;
         }
@@ -189,6 +194,7 @@ public class API : MonoBehaviour
         //textConnected.SetActive(true);
         RequestUserPlaylists();
         RequestUserInfo();
+        isConnected = true;
         //RequestTrackInfo();
         //RequestCurrentPlaylistInfo();
     }
@@ -198,7 +204,6 @@ public class API : MonoBehaviour
     {
         //authCode = textInput.GetComponent<InputField>().text;
         authCode = GUIUtility.systemCopyBuffer;
-        Debug.Log(authCode);
         Request();
     }
 
@@ -221,7 +226,6 @@ public class API : MonoBehaviour
         userRegion = userResponseInfo["country"];
         userID = userResponseInfo["display_name"];
         userPremiumStatus = userResponseInfo["product"];
-        Debug.Log(www.downloadHandler.text);
 
         if (userPremiumStatus != "premium")
         {
@@ -320,10 +324,9 @@ public class API : MonoBehaviour
     {
         yield return www.SendWebRequest();
 
-        Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
+        //Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
         RefreshCurrentPlaylistInfo();
         JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
-        //RefreshCurrentPlaylistInfo();
         ParsePlaylistItemResponse(playlistItemResponse);
     }
 
@@ -376,7 +379,7 @@ public class API : MonoBehaviour
     //**REQUEST TRACK INFO** (ACTUALLY PLAYER INFORMATION)
     public void RequestPlayerInfo()
     {
-        isRequestingTrackInfo = true;
+        isRequestingPlayerInfo = true;
         //string bodyJsonString = "Body: Info";
         //byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
 
@@ -394,7 +397,7 @@ public class API : MonoBehaviour
 
         if (www.isNetworkError)
         {
-            //Debug.Log(www.error);
+            Debug.Log(www.error);
         }
 
         else
@@ -402,27 +405,34 @@ public class API : MonoBehaviour
             //Debug.Log(www.downloadHandler.text);
         }
 
-        JSONNode playerInfoResponse = JSON.Parse(www.downloadHandler.text);
-        trackInfo = playerInfoResponse["item"]["name"];
-        trackURI = playerInfoResponse["item"]["uri"];
-        isPlayingString = playerInfoResponse["is_playing"];
-        currentPlaylist = playerInfoResponse["context"]["uri"];
-
-        deviceID = playerInfoResponse["device"]["id"];
-        shuffleState = playerInfoResponse["shuffle_state"];
-        repeatState = playerInfoResponse["repeat_state"];
-        trackProgress = playerInfoResponse["progress_ms"];
-
-        foreach (JSONNode item in playerInfoResponse["item"]["album"]["artists"])
+        if(www.downloadHandler.text != "")
         {
-            trackArtist = item["name"];
+            JSONNode playerInfoResponse = JSON.Parse(www.downloadHandler.text);
+
+            trackInfo = playerInfoResponse["item"]["name"];
+            trackURI = playerInfoResponse["item"]["uri"];
+            isPlayingString = playerInfoResponse["is_playing"];
+            currentPlaylist = playerInfoResponse["context"]["uri"];
+
+            deviceID = playerInfoResponse["device"]["id"];
+            shuffleState = playerInfoResponse["shuffle_state"];
+            repeatState = playerInfoResponse["repeat_state"];
+            trackProgress = playerInfoResponse["progress_ms"];
+
+            if (playerInfoResponse != null)
+                foreach (JSONNode item in playerInfoResponse["item"]["album"]["artists"])
+                {
+                    trackArtist = item["name"];
+                }
         }
 
-        isRequestingTrackInfo = false;
+
+        isRequestingPlayerInfo = false;
     }
 
     public void RequestTrackInfo()
     {
+        isRequestingTrackInfo = true;
         if(trackURI != null)
         {
             trackURI = trackURI.Replace("spotify:track:", "");
@@ -452,6 +462,7 @@ public class API : MonoBehaviour
         {
             //Debug.Log(www.downloadHandler.text);
         }
+        isRequestingTrackInfo = false;
     }
 
     // **Playback Button Requests**
@@ -605,12 +616,12 @@ public class API : MonoBehaviour
 
         if (www.isNetworkError)
         {
-            Debug.Log(www.error);
+            //Debug.Log(www.error);
         }
 
         else
         {
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
         }
 
         //RefreshCurrentPlaylistInfo();
@@ -652,9 +663,11 @@ public class API : MonoBehaviour
     {
         while (true)
         {
-            RequestPlayerInfo();
-            RequestTrackInfo();
-            //RequestPlayerInfo();
+            if(isConnected)
+            {
+                RequestPlayerInfo();
+                RequestTrackInfo();
+            }
             yield return new WaitForSeconds(.5f);
         }
     }

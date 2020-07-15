@@ -11,12 +11,19 @@ public class TrackDuration : MonoBehaviour
 
     void Update()
     {
-        if (API.instance.trackProgress != null && API.instance.trackDuration != null)
+        if (API.instance.trackProgress != null && API.instance.trackDuration != null && API.instance.isConnected == true)
         {
-            durationFloat = float.Parse(API.instance.trackDuration, CultureInfo.InvariantCulture);
-            progressFloat = float.Parse(API.instance.trackProgress, CultureInfo.InvariantCulture);
+            if(!API.instance.isRequestingTrackInfo && !API.instance.isRequestingPlayerInfo && !API.instance.isRequestingPlaylistInfo)
+            {
+                if(API.instance.trackDuration != "" && API.instance.trackProgress != "")
+                {
+                    durationFloat = float.Parse(API.instance.trackDuration, CultureInfo.InvariantCulture);
+                    progressFloat = float.Parse(API.instance.trackProgress, CultureInfo.InvariantCulture);
+
+                    gameObject.GetComponent<Slider>().maxValue = durationFloat;
+                    gameObject.GetComponent<Slider>().value = progressFloat;
+                }
+            }
         }
-            gameObject.GetComponent<Slider>().maxValue = durationFloat;
-            gameObject.GetComponent<Slider>().value = progressFloat;
     }
 }

@@ -2352,7 +2352,7 @@ RectTransform:
   - {fileID: 1021166073}
   - {fileID: 1636458283}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3406,7 +3406,7 @@ RectTransform:
   - {fileID: 1995120923}
   - {fileID: 551581980}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4183,7 +4183,7 @@ RectTransform:
   - {fileID: 761432919}
   - {fileID: 242329766}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4813,106 +4813,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &553343076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 553343077}
-  - component: {fileID: 553343080}
-  - component: {fileID: 553343079}
-  - component: {fileID: 553343078}
-  m_Layer: 5
-  m_Name: Text_Artist
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &553343077
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553343076}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 113.7554}
-  m_LocalScale: {x: 2.0173273, y: 1.9924222, z: 1.9924222}
-  m_Children: []
-  m_Father: {fileID: 1729007027}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 484.74863, y: 152.27838}
-  m_SizeDelta: {x: 181.6, y: 40.3}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &553343078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553343076}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e7a66529e1154516ad740f2e70acfe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackNameDisplay: {fileID: 2053908475}
-  trackArtistDisplay: {fileID: 553343079}
-  playlistURIDisplay: {fileID: 0}
-  userPlaylists: {fileID: 0}
-  currentPlaylistDisplay: {fileID: 0}
-  userIDDisplay: {fileID: 0}
-  userRegionDisplay: {fileID: 0}
-  api: {fileID: 1097517032}
---- !u!114 &553343079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553343076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: Info...Artist
---- !u!222 &553343080
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553343076}
-  m_CullTransparentMesh: 0
 --- !u!1 &557614640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5943,7 +5843,7 @@ RectTransform:
   - {fileID: 1720771970}
   - {fileID: 595389375}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6860,7 +6760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackNameDisplay: {fileID: 815786114}
-  trackArtistDisplay: {fileID: 553343079}
+  trackArtistDisplay: {fileID: 0}
   playlistURIDisplay: {fileID: 0}
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
@@ -7631,7 +7531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 516, y: 211}
+  m_AnchoredPosition: {x: 457, y: 257}
   m_SizeDelta: {x: 180.4, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895177379
@@ -7647,7 +7547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackNameDisplay: {fileID: 895177380}
-  trackArtistDisplay: {fileID: 553343079}
+  trackArtistDisplay: {fileID: 0}
   playlistURIDisplay: {fileID: 0}
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
@@ -9417,7 +9317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 976, y: 289}
+  m_AnchoredPosition: {x: 957, y: 217}
   m_SizeDelta: {x: 180.4, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102624922
@@ -9433,7 +9333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackNameDisplay: {fileID: 1102624923}
-  trackArtistDisplay: {fileID: 553343079}
+  trackArtistDisplay: {fileID: 0}
   playlistURIDisplay: {fileID: 0}
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
@@ -10145,7 +10045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackNameDisplay: {fileID: 1200300536}
-  trackArtistDisplay: {fileID: 553343079}
+  trackArtistDisplay: {fileID: 0}
   playlistURIDisplay: {fileID: 0}
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
@@ -13463,7 +13363,7 @@ RectTransform:
   - {fileID: 916151346}
   - {fileID: 1381325396}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15052,7 +14952,6 @@ Transform:
   - {fileID: 50559534}
   - {fileID: 1074328993}
   - {fileID: 454153846}
-  - {fileID: 553343077}
   - {fileID: 1623185475}
   - {fileID: 1955689319}
   - {fileID: 453213803}
@@ -15159,7 +15058,7 @@ RectTransform:
   - {fileID: 817551194}
   - {fileID: 748007533}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15662,7 +15561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 459, y: 292.5}
+  m_AnchoredPosition: {x: 459, y: 302}
   m_SizeDelta: {x: 180.4, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833896124
@@ -15678,7 +15577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackNameDisplay: {fileID: 1833896125}
-  trackArtistDisplay: {fileID: 553343079}
+  trackArtistDisplay: {fileID: 0}
   playlistURIDisplay: {fileID: 0}
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
@@ -16429,7 +16328,7 @@ RectTransform:
   - {fileID: 1231623669}
   - {fileID: 486773898}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16987,7 +16886,7 @@ RectTransform:
   - {fileID: 1719426413}
   - {fileID: 203271649}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17479,7 +17378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 890.9, y: 222}
+  m_AnchoredPosition: {x: 829, y: 261}
   m_SizeDelta: {x: 321.1, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040975477
@@ -17495,7 +17394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackNameDisplay: {fileID: 2040975478}
-  trackArtistDisplay: {fileID: 553343079}
+  trackArtistDisplay: {fileID: 0}
   playlistURIDisplay: {fileID: 0}
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
@@ -17579,7 +17478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 666, y: 290.5}
+  m_AnchoredPosition: {x: 666, y: 300}
   m_SizeDelta: {x: 180.4, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053908475
@@ -17637,7 +17536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackNameDisplay: {fileID: 2053908475}
-  trackArtistDisplay: {fileID: 553343079}
+  trackArtistDisplay: {fileID: 0}
   playlistURIDisplay: {fileID: 0}
   userPlaylists: {fileID: 0}
   currentPlaylistDisplay: {fileID: 0}
@@ -17902,7 +17801,7 @@ RectTransform:
   - {fileID: 1640089460}
   - {fileID: 1555472767}
   m_Father: {fileID: 1729007027}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
