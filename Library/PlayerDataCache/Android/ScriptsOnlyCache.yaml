@@ -21,13 +21,16 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -57,6 +60,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9332}
     - Class: 114
+      Script: {instanceID: 9334}
+    - Class: 114
       Script: {instanceID: 9338}
     - Class: 114
       Script: {instanceID: 9344}
@@ -67,6 +72,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9360}
     - Class: 114
+      Script: {instanceID: 9378}
+    - Class: 114
       Script: {instanceID: 9380}
     - Class: 114
       Script: {instanceID: 9386}
@@ -74,6 +81,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9388}
     - Class: 114
       Script: {instanceID: 9390}
+    - Class: 114
+      Script: {instanceID: 9400}
     - Class: 114
       Script: {instanceID: 9440}
     - Class: 114
@@ -379,7 +388,7 @@ ScriptsOnlyBuild:
     className: Placeholder
   - hash:
       serializedVersion: 2
-      Hash: 4c50aa29ecf5d21c811b25d4755c6eb8
+      Hash: 783e8a0459da59c7e0db49e21d9e913f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InfoDisplayController
@@ -589,7 +598,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 192e3dc200a6e4275da6e7cdbe4c0c7c
+      Hash: fba9fcd4fe4f7963f0c50eae2caf4f98
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: API
@@ -793,7 +802,7 @@ ScriptsOnlyBuild:
     className: ActivateButton
   - hash:
       serializedVersion: 2
-      Hash: 3cb4d961bcce47b6a1d95d7c36cb54bb
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Button_Play
@@ -854,4 +863,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.2.apk
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.3.apk
