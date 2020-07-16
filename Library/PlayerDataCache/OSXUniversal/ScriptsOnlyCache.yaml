@@ -588,7 +588,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: fba9fcd4fe4f7963f0c50eae2caf4f98
+      Hash: e0fc16507ecf5c141f3d79beca07abcc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: API
@@ -853,4 +853,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.3.app
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.4.2.app
