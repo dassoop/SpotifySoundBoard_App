@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{7900B1A6-24ED-41F1-1500-43595DB93EEE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UserPlaylists_Item.cs">
     <Files>
-      <File FileName="Assets/Scripts/UserPlaylists_Item.cs" Line="71" Column="53" />
+      <File FileName="Assets/Scripts/UserPlaylists_Item.cs" Line="97" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a83d7cc1-09b7-4d53-b05d-3f70f054dbf4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00c0bf0b-7d0b-450b-91f3-ed7f3cbf526e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

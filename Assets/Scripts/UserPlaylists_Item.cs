@@ -68,7 +68,6 @@ public class UserPlaylists_Item : MonoBehaviour
                 mainButton.activePlaylistName = playlistName;
                 mainButton.activePlaylistURI = playlistURI;
                 mainButton.slider.maxValue = trackDuration;
-                Debug.Log("HERE: " + trackDuration);
                 mainButton.isActive = false;
             }
 
@@ -93,7 +92,6 @@ public class UserPlaylists_Item : MonoBehaviour
     IEnumerator ResponseCurrentPlaylistInfo(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
-        Debug.Log("REQUEST PLAYLIST INFO" + www.downloadHandler.text);
         JSONNode playlistItemResponse = JSON.Parse(www.downloadHandler.text);
 
         foreach (JSONNode item in playlistItemResponse["items"])
