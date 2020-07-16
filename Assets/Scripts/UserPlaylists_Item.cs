@@ -14,12 +14,15 @@ public class UserPlaylists_Item : MonoBehaviour
     public string trackURI;
     public string trackName;
     public int trackDuration;
+    public Canvas canvas;
     public Text playlistItemText;
     public MainButton mainButton;
     public GameObject[] mainButtonObjects;
 
     private void Start()
     {
+        canvas = FindObjectOfType<Canvas>();
+        transform.localScale = new Vector3(transform.localScale.x * canvas.transform.localScale.x * .9f, transform.localScale.y * canvas.transform.localScale.y * .9f, transform.localScale.z * canvas.transform.localScale.z * .9f);
         //mainButton = FindObjectOfType<MainButton>();
 
         //mainButtonObjects = GameObject.FindGameObjectsWithTag("TriggerButton");

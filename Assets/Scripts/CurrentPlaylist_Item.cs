@@ -8,9 +8,16 @@ public class CurrentPlaylist_Item : MonoBehaviour
     public string playlistItemName;
     public string playlistItemURI;
     public Text playlistItemText;
+    public Canvas canvas;
     public GameObject[] mainButtonObjects;
     public GameObject panelCurrentPlaylist;
     public GameObject buttonGreen;
+
+    private void Start()
+    {
+        canvas = FindObjectOfType<Canvas>();
+        transform.localScale = new Vector3(transform.localScale.x * canvas.transform.localScale.x * .9f, transform.localScale.y * canvas.transform.localScale.y * .9f, transform.localScale.z * canvas.transform.localScale.z * .9f);
+    }
 
     private void Update()
     {
@@ -20,10 +27,14 @@ public class CurrentPlaylist_Item : MonoBehaviour
 
         if (playlistItemURI == API.instance.trackURI)
         {
+            //Debug.Log(API.instance.trackURI);
+            //Debug.Log(playlistItemURI);
             buttonGreen.SetActive(true);
         }
         else if (API.instance.isTrackChanging == true)
         {
+            //Debug.Log(API.instance.trackURI);
+            //Debug.Log(playlistItemURI);
             buttonGreen.SetActive(false);
             API.instance.isTrackChanging = false;
         }

@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{7900B1A6-24ED-41F1-1500-43595DB93EEE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UserPlaylists_Item.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CurrentPlaylist_Item.cs">
     <Files>
-      <File FileName="Assets/Scripts/UserPlaylists_Item.cs" Line="97" Column="59" />
+      <File FileName="Assets/Scripts/UserPlaylists_Item.cs" Line="35" Column="12" />
+      <File FileName="Assets/Scripts/CurrentPlaylist_Item.cs" Line="37" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,7 +10,7 @@
           <Node name="SpotifySoundboardApp" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="UserPlaylists_Item.cs" selected="True" />
+                <Node name="CurrentPlaylist_Item.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -19,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00c0bf0b-7d0b-450b-91f3-ed7f3cbf526e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fa0046a3-36c4-4221-bb86-937aebf638e3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
