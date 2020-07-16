@@ -72,6 +72,10 @@ public class API : MonoBehaviour
     [HideInInspector]
     public string trackDuration;
     [HideInInspector]
+    public string localTrackDuration;
+    [HideInInspector]
+    public string isTrackLocal;
+    [HideInInspector]
     public string availableMarkets;
     [HideInInspector]
     public string currentTrackAvailableMarket;
@@ -110,22 +114,20 @@ public class API : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(LoopingUpdate());
+        InvokeRepeating("LoopingUpdateMethod", 0f, .5f);
+    }
+
+    public void LoopingUpdateMethod()
+    {
+        if (isConnected)
+        {
+            RequestPlayerInfo();
+            RequestTrackInfo();
+        }
     }
 
     public void Update()
     {
-        //RequestPlayerInfo();
-        //if (isRequestingTrackInfo == false)
-        //{
-        //    RequestTrackInfo();
-        //}
-
-        //if (isRequestingPlayerInfo == false)
-        //{
-        //    RequestPlayerInfo();
-        //}
-
         if (trackInfo != previousTrackInfo)
         {
             if(isConnected)
@@ -421,6 +423,11 @@ public class API : MonoBehaviour
             shuffleState = playerInfoResponse["shuffle_state"];
             repeatState = playerInfoResponse["repeat_state"];
             trackProgress = playerInfoResponse["progress_ms"];
+            localTrackDuration = playerInfoResponse["item"]["duration_ms"];
+            isTrackLocal = playerInfoResponse["item"]["is_local"];
+
+
+            Debug.Log(www.downloadHandler.text);
 
             if (playerInfoResponse != null)
                 foreach (JSONNode item in playerInfoResponse["item"]["album"]["artists"])
@@ -428,6 +435,8 @@ public class API : MonoBehaviour
                     trackArtist = item["name"];
                 }
         }
+
+        //"uri" : "spotify:local:::sfx_TrainYard_TrainWhistle_Close_2:5"
 
         else
         {
@@ -468,7 +477,7 @@ public class API : MonoBehaviour
 
         else
         {
-            //Debug.Log(www.downloadHandler.text);
+            Debug.Log(www.downloadHandler.text);
         }
         isRequestingTrackInfo = false;
     }
@@ -664,19 +673,6 @@ public class API : MonoBehaviour
         else
         {
             Debug.Log(www.downloadHandler.text);
-        }
-    }
-
-    IEnumerator LoopingUpdate()
-    {
-        while (true)
-        {
-            if(isConnected)
-            {
-                RequestPlayerInfo();
-                RequestTrackInfo();
-            }
-            yield return new WaitForSeconds(.5f);
         }
     }
 
