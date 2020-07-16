@@ -122,7 +122,7 @@ public class API : MonoBehaviour
         if (isConnected)
         {
             RequestPlayerInfo();
-            RequestTrackInfo();
+            //RequestTrackInfo();
         }
     }
 
@@ -423,11 +423,8 @@ public class API : MonoBehaviour
             shuffleState = playerInfoResponse["shuffle_state"];
             repeatState = playerInfoResponse["repeat_state"];
             trackProgress = playerInfoResponse["progress_ms"];
-            localTrackDuration = playerInfoResponse["item"]["duration_ms"];
+            trackDuration = playerInfoResponse["item"]["duration_ms"];
             isTrackLocal = playerInfoResponse["item"]["is_local"];
-
-
-            Debug.Log(www.downloadHandler.text);
 
             if (playerInfoResponse != null)
                 foreach (JSONNode item in playerInfoResponse["item"]["album"]["artists"])

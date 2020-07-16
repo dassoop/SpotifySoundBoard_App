@@ -68,6 +68,7 @@ public class UserPlaylists_Item : MonoBehaviour
                 mainButton.activePlaylistName = playlistName;
                 mainButton.activePlaylistURI = playlistURI;
                 mainButton.slider.maxValue = trackDuration;
+                Debug.Log("HERE: " + trackDuration);
                 mainButton.isActive = false;
             }
 
@@ -98,30 +99,36 @@ public class UserPlaylists_Item : MonoBehaviour
         foreach (JSONNode item in playlistItemResponse["items"])
         {
             trackURI = item["track"]["uri"];
-            Debug.Log("TRACK URI: " + trackURI);
+            trackDuration = item["track"]["duration_ms"];
             break;
         }
-        RequestTrackInfo();
-    }
 
-    public void RequestTrackInfo()
-    {
-        if (trackURI != null)
-        {
-            trackURI = trackURI.Replace("spotify:track:", "");
-        }
-
-        UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/tracks/" + trackURI);
-        www.SetRequestHeader("Authorization", "Bearer " + API.instance.accessToken);
-        StartCoroutine(ResponseTrackInfo(www));
-    }
-
-    IEnumerator ResponseTrackInfo(UnityWebRequest www)
-    {
-        yield return www.SendWebRequest();
-        JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
-        trackDuration = trackInfoResponse["duration_ms"];
+        //RequestTrackInfo();
         SendInfoToPlayButton();
-        Debug.Log("TRACK DURATION: " + trackDuration);
     }
+
+    //public void RequestTrackInfo()
+    //{
+    //    if (trackURI != null)
+    //    {
+    //        trackURI = trackURI.Replace("spotify:local:::", "");
+    //        trackURI = trackURI.Replace(":5", "");
+    //        trackURI = trackURI.Replace("spotify:track:", "");
+    //        Debug.Log(trackURI);
+    //    }
+
+    //    UnityWebRequest www = UnityWebRequest.Get("https://api.spotify.com/v1/tracks/" + trackURI);
+    //    www.SetRequestHeader("Authorization", "Bearer " + API.instance.accessToken);
+    //    StartCoroutine(ResponseTrackInfo(www));
+    //}
+
+    //IEnumerator ResponseTrackInfo(UnityWebRequest www)
+    //{
+    //    yield return www.SendWebRequest();
+    //    JSONNode trackInfoResponse = JSON.Parse(www.downloadHandler.text);
+    //    trackDuration = trackInfoResponse["duration_ms"];
+    //    SendInfoToPlayButton();
+    //    Debug.Log("TRACK DURATION: " + trackDuration);
+    //    Debug.Log(www.downloadHandler.text);
+    //}
 }
