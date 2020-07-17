@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\InfoDisplayController.cs" />
     <Compile Include="Assets\Scripts\LoginPrompt.cs" />
     <Compile Include="Assets\Scripts\MainButton.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\PlaylistForm.cs" />
     <Compile Include="Assets\Scripts\SliderButton.cs" />
     <Compile Include="Assets\Scripts\TrackDuration.cs" />
