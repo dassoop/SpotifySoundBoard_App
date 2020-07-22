@@ -10,6 +10,8 @@ public class MainButton : MonoBehaviour
 	public API api;
 	public GameObject buttonGreen;
     public GameObject buttonFadeInRed;
+    public GameObject buttonFadeIn;
+    public GameObject buttonFadeInX;
 	public Slider slider;
     public Text activePlaylistText;
     public string activePlaylistName;
@@ -33,6 +35,18 @@ public class MainButton : MonoBehaviour
 			//buttonGreen.SetActive(false);
 		}
         activePlaylistText.text = activePlaylistName;
+
+        if (api.deviceType == "Computer")
+        {
+            buttonFadeIn.GetComponent<Button>().interactable = true;
+            buttonFadeInX.SetActive(false);
+        }
+
+        else
+        {
+            buttonFadeIn.GetComponent<Button>().interactable = false;
+            buttonFadeInX.SetActive(true);
+        }
 	}
 
 	public void OnPressed()

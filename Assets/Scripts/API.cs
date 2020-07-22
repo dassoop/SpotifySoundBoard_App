@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
-using System.Text;
+ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -87,6 +87,8 @@ public class API : MonoBehaviour
     public string userPremiumStatus;
     [HideInInspector]
     public string connectedDeviceName;
+    [HideInInspector]
+    public string deviceType;
 
     public bool isRequestingPlaylistInfo = false;
     public bool isRequestingTrackInfo = false;
@@ -420,6 +422,7 @@ public class API : MonoBehaviour
 
             deviceID = playerInfoResponse["device"]["id"];
             connectedDeviceName = playerInfoResponse["device"]["name"];
+            deviceType = playerInfoResponse["device"]["type"];
             shuffleState = playerInfoResponse["shuffle_state"];
             repeatState = playerInfoResponse["repeat_state"];
             trackProgress = playerInfoResponse["progress_ms"];
@@ -432,8 +435,6 @@ public class API : MonoBehaviour
                     trackArtist = item["name"];
                 }
         }
-
-        //"uri" : "spotify:local:::sfx_TrainYard_TrainWhistle_Close_2:5"
 
         else
         {
@@ -645,6 +646,34 @@ public class API : MonoBehaviour
 
 
     //**VOLUME CONTROLS**
+    public void ChangeDeviceVolumeRequest()
+    {
+        int volume = (int)spotifyVolumeSlider.GetComponent<Slider>().value;
+        //Debug.Log(volume);
+        string bodyJsonString = "Body: Info";
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
+        UnityWebRequest www = UnityWebRequest.Put("https://api.spotify.com/v1/me/player/volume?volume_percent=" + volume + "&device_id=2725a5ba92c55e75449e658f3c0adab140f1f577", bodyRaw);
+        www.SetRequestHeader("Content-Type", "application/json");
+        www.SetRequestHeader("Authorization", "Bearer " + accessToken);
+
+        StartCoroutine(ChangeDeviceVolumeResponse(www));
+    }
+
+    IEnumerator ChangeDeviceVolumeResponse(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError)
+        {
+            Debug.Log(www.error);
+        }
+
+        else
+        {
+            Debug.Log(www.downloadHandler.text);
+        }
+    }
+
     public void ChangeVolumeRequest()
     {
         int volume = (int)spotifyVolumeSlider.GetComponent<Slider>().value;
