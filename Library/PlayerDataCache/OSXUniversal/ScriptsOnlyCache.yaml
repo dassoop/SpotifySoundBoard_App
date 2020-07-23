@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - InfoDisplayController
     - LoginPrompt
     - MainButton
+    - Menu
     - SliderButton
     - TrackDuration
     - UserPlaylists_Item
@@ -98,17 +99,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9982}
+      Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 10016}
+      Script: {instanceID: 9984}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 10018}
     - Class: 114
-      Script: {instanceID: 10388}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10564}
+    - Class: 114
+      Script: {instanceID: 10602}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -132,7 +135,7 @@ ScriptsOnlyBuild:
     className: TrackDuration
   - hash:
       serializedVersion: 2
-      Hash: 971b3825e18e2d54ccfdba4c853010e4
+      Hash: 95255f3386708e2c52fb663d1f9ca0e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CurrentPlaylist_Item
@@ -576,7 +579,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: f852dce7dff531b5cd497edb8aa81919
+      Hash: c958442292e5cf77436cf106d98405ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainButton
@@ -588,7 +591,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: e0fc16507ecf5c141f3d79beca07abcc
+      Hash: cd531e71d50ac84c16b849ee833208da
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: API
@@ -682,6 +685,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: bfc08781811e63651e6f0d8fc263a6f7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -840,7 +849,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: d9a7096b0cedefe28b98175d6126bf91
+      Hash: 6b13d7238cbf06f59b29f84ae1e4efd3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UserPlaylists_Item
@@ -853,4 +862,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.4.2.app
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.4.5.app

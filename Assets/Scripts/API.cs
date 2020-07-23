@@ -355,7 +355,7 @@ public class API : MonoBehaviour
                 }
 
                 Vector3 newPosition = new Vector3(currentPlaylistLabel.position.x, currentPlaylistLabel.position.y + playlistItemMovementAmount, currentPlaylistLabel.position.z);
-                currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI);
+                currentPlaylistItem.GetComponent<CurrentPlaylist_Item>().SetItemInfo(playlistItemName, playlistItemURI, playlistItemCount);
                 Instantiate(currentPlaylistItem, newPosition, currentPlaylistLabel.rotation);
 
                 //playlistItemMovementAmount -= 35;
@@ -434,7 +434,12 @@ public class API : MonoBehaviour
                 {
                     trackArtist = item["name"];
                 }
+            Debug.Log(trackURI);
+
+            //spotify:track:5bmdJ1tDzAtjSeR8WpALp4
         }
+
+
 
         else
         {

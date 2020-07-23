@@ -7,6 +7,7 @@ public class CurrentPlaylist_Item : MonoBehaviour
 {
     public string playlistItemName;
     public string playlistItemURI;
+    public int playlistItemCount;
     public Text playlistItemText;
     public Canvas canvas;
     public GameObject[] mainButtonObjects;
@@ -25,7 +26,7 @@ public class CurrentPlaylist_Item : MonoBehaviour
         //gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
         gameObject.transform.SetParent(GameObject.Find("Content_CurrentPlaylist").transform);
 
-        if (playlistItemURI == API.instance.trackURI)
+        if (playlistItemName == API.instance.trackInfo)
         {
             //Debug.Log(API.instance.trackURI);
             //Debug.Log(playlistItemURI);
@@ -40,10 +41,11 @@ public class CurrentPlaylist_Item : MonoBehaviour
         }
     }
 
-    public void SetItemInfo(string name, string uri)
+    public void SetItemInfo(string name, string uri, int count)
     {
         playlistItemURI = uri;
         playlistItemName = name;
+        playlistItemCount = count;
         playlistItemText.text = name;
     }
 }
