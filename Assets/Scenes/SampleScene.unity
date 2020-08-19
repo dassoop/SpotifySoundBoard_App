@@ -4869,7 +4869,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1628865750}
   m_HandleRect: {fileID: 1628865749}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5283,6 +5283,137 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &515648021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515648022}
+  - component: {fileID: 515648025}
+  - component: {fileID: 515648024}
+  - component: {fileID: 515648023}
+  m_Layer: 5
+  m_Name: 'BackPanel_ReadMe '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &515648022
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515648021}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 37827.105}
+  m_LocalScale: {x: 33.54804, y: 18.329979, z: 1.5180107}
+  m_Children: []
+  m_Father: {fileID: 936172125}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 166.33972, y: 189.2074}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &515648023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515648021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 515648024}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 557869195}
+        m_MethodName: CloseReadMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &515648024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515648021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.53333336}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &515648025
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515648021}
+  m_CullTransparentMesh: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5743,7 +5874,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 326529261}
   m_HandleRect: {fileID: 326529260}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5818,6 +5949,7 @@ RectTransform:
   m_Children:
   - {fileID: 1007568520}
   - {fileID: 1305472719}
+  - {fileID: 936172125}
   m_Father: {fileID: 1516513312}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5840,6 +5972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 557869193}
   tutorial: {fileID: 865981230}
+  readMe: {fileID: 936172124}
 --- !u!1 &565963666
 GameObject:
   m_ObjectHideFlags: 0
@@ -6061,6 +6194,264 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590398843}
+  m_CullTransparentMesh: 0
+--- !u!1 &596171952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596171953}
+  - component: {fileID: 596171955}
+  - component: {fileID: 596171954}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &596171953
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596171952}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.810229}
+  m_LocalScale: {x: 0.58619094, y: 1.1495636, z: 1.1495636}
+  m_Children: []
+  m_Father: {fileID: 1653315896}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -13.785065, y: -1801.3772}
+  m_SizeDelta: {x: 568.7, y: 3586.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &596171954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596171952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: " END USER LICENSE AGREEMENT\nThis copy of EZ SoundBoard (\"the Software
+    Product\") and accompanying documentation is licensed and not sold. This Software
+    Product is protected by copyright laws and treaties, as well as laws and treaties
+    related to other forms of intellectual property. LS Sound or its subsidiaries,
+    affiliates, and suppliers (collectively \"LS Sound\") own intellectual property
+    rights in the Software Product. The Licensee's (\"you\" or \"your\") license to
+    download, use, copy, or change the Software Product is subject to these rights
+    and to all the terms and conditions of this End User License Agreement (\"Agreement\").\nAcceptance\nYOU
+    ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT BY SELECTING THE \"ACCEPT\"
+    OPTION AND DOWNLOADING THE SOFTWARE PRODUCT OR BY INSTALLING, USING, OR COPYING
+    THE SOFTWARE PRODUCT. YOU MUST AGREE TO ALL OF THE TERMS OF THIS AGREEMENT BEFORE
+    YOU WILL BE ALLOWED TO DOWNLOAD THE SOFTWARE PRODUCT. IF YOU DO NOT AGREE TO ALL
+    OF THE TERMS OF THIS AGREEMENT, YOU MUST SELECT \"DECLINE\" AND YOU MUST NOT INSTALL,
+    USE, OR COPY THE SOFTWARE PRODUCT.\nLicense Grant\nThis Agreement entitles you
+    to install and use one copy of the Software Product. In addition, you may make
+    one archival copy of the Software Product. The archival copy must be on a storage
+    medium other than a hard drive, and may only be used for the reinstallation of
+    the Software Product. This Agreement does not permit the installation or use of
+    multiple copies of the Software Product, or the installation of the Software Product
+    on more than one computer at any given time, on a system that allows shared used
+    of applications, on a multi-user network, or on any configuration or system of
+    computers that allows multiple users. Multiple copy use or installation is only
+    allowed if you obtain an appropriate licensing agreement for each user and each
+    copy of the Software Product.\nRestrictions on Transfer\nWithout first obtaining
+    the express written consent of LS Sound, you may not assign your rights and obligations
+    under this Agreement, or redistribute, encumber, sell, rent, lease, sublicense,
+    or otherwise transfer your rights to the Software Product.\nThis is a RocketLawyer.com
+    document. Page 1 of 3\n\n Restrictions on Use\nYou may not use, copy, or install
+    the Software Product on any system with more than one computer, or permit the
+    use, copying, or installation of the Software Product by more than one user or
+    on more than one computer. If you hold multiple, validly licensed copies, you
+    may not use, copy, or install the Software Product on any system with more than
+    the number of computers permitted by license, or permit the use, copying, or installation
+    by more users, or on more computers than the number permitted by license.\nYou
+    may not decompile, \"reverse-engineer\", disassemble, or otherwise attempt to
+    derive the source code for the Software Product.\nRestrictions on Alteration\nYou
+    may not modify the Software Product or create any derivative work of the Software
+    Product or its accompanying documentation. Derivative works include but are not
+    limited to translations. You may not alter any files or libraries in any portion
+    of the Software Product.\nRestrictions on Copying\nYou may not copy any part of
+    the Software Product except to the extent that licensed use inherently demands
+    the creation of a temporary copy stored in computer memory and not permanently
+    affixed on storage medium. You may make one archival copy which must be stored
+    on a medium other than a computer hard drive.\nLimited Software Product Warranty\nFor
+    a period of 30 days from the date of shipment or from the date that you download
+    the Software Product, as applicable, LS Sound warrants that when properly installed
+    and used under normal conditions, the Software Product will perform substantially
+    as advertised.\nDisclaimer of Warranties and Limitation of Liability\nUNLESS OTHERWISE
+    EXPLICITLY AGREED TO IN WRITING BY LS SOUND, LS SOUND MAKES NO OTHER WARRANTIES,
+    EXPRESS OR IMPLIED, IN FACT OR IN LAW, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED
+    WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OTHER THAN AS
+    SET FORTH IN THIS AGREEMENT OR IN THE LIMITED WARRANTY DOCUMENTS PROVIDED WITH
+    THE SOFTWARE PRODUCT.\nLS Sound makes no warranty that the Software Product will
+    meet your requirements or operate under your specific conditions of use. LS Sound
+    makes no warranty that operation of the Software Product will be secure, error
+    free, or free from interruption. YOU MUST DETERMINE WHETHER THE SOFTWARE PRODUCT
+    SUFFICIENTLY MEETS YOUR REQUIREMENTS FOR SECURITY AND UNINTERRUPTABILITY. YOU
+    BEAR SOLE RESPONSIBILITY AND ALL LIABILITY FOR ANY LOSS INCURRED DUE TO FAILURE
+    OF THE SOFTWARE PRODUCT TO MEET YOUR REQUIREMENTS. LS SOUND WILL NOT, UNDER ANY
+    CIRCUMSTANCES, BE RESPONSIBLE OR LIABLE FOR THE LOSS OF DATA ON ANY COMPUTER OR
+    INFORMATION STORAGE DEVICE.\nThis is a RocketLawyer.com document. Page 2 of 3\n\n
+    UNDER NO CIRCUMSTANCES SHALL LS SOUND, ITS DIRECTORS, OFFICERS, EMPLOYEES OR AGENTS
+    BE LIABLE TO YOU OR ANY OTHER PARTY FOR INDIRECT, CONSEQUENTIAL, SPECIAL, INCIDENTAL,
+    PUNITIVE, OR EXEMPLARY DAMAGES OF ANY KIND (INCLUDING LOST REVENUES OR PROFITS
+    OR LOSS OF BUSINESS) RESULTING FROM THIS AGREEMENT, OR FROM THE FURNISHING, PERFORMANCE,
+    INSTALLATION, OR USE OF THE SOFTWARE PRODUCT, WHETHER DUE TO A BREACH OF CONTRACT,
+    BREACH OF WARRANTY, OR THE NEGLIGENCE OF LS SOUND OR ANY OTHER PARTY, EVEN IF
+    LS SOUND IS ADVISED BEFOREHAND OF THE POSSIBILITY OF SUCH DAMAGES. TO THE EXTENT
+    THAT THE APPLICABLE JURISDICTION LIMITS LS SOUND'S ABILITY TO DISCLAIM ANY IMPLIED
+    WARRANTIES, THIS DISCLAIMER SHALL BE EFFECTIVE TO THE MAXIMUM EXTENT PERMITTED.\nLimitation
+    of Remedies and Damages\nYour remedy for a breach of this Agreement or of any
+    warranty included in this Agreement is the correction or replacement of the Software
+    Product. Selection of whether to correct or replace shall be solely at the discretion
+    of LS Sound. LS Sound reserves the right to substitute a functionally equivalent
+    copy of the Software Product as a replacement. If LS Sound is unable to provide
+    a replacement or substitute Software Product or corrections to the Software Product,
+    your sole alternate remedy shall be a refund of the purchase price for the Software
+    Product exclusive of any costs for shipping and handling.\nAny claim must be made
+    within the applicable warranty period. All warranties cover only defects arising
+    under normal use and do not include malfunctions or failure resulting from misuse,
+    abuse, neglect, alteration, problems with electrical power, acts of nature, unusual
+    temperatures or humidity, improper installation, or damage determined by LS Sound
+    to have been caused by you. All limited warranties on the Software Product are
+    granted only to you and are non-transferable. You agree to indemnify and hold
+    LS Sound harmless from all claims, judgments, liabilities, expenses, or costs
+    arising from your breach of this Agreement and/or acts or omissions.\nGoverning
+    Law, Jurisdiction and Costs\nThis Agreement is governed by the laws of California,
+    without regard to California's conflict or choice of law provisions.\nSeverability\nIf
+    any provision of this Agreement shall be held to be invalid or unenforceable,
+    the remainder of this Agreement shall remain in full force and effect. To the
+    extent any express or implied restrictions are not permitted by applicable laws,
+    these express or implied restrictions shall remain in force and effect to the
+    maximum extent permitted by such applicable laws.\nThis is a RocketLawyer.com
+    document. Page 3 of 3\n\n\n\n\n\n\n Privacy Policy\nProtecting your private information
+    is our priority. This Statement of Privacy applies to _________________ and EZ
+    SoundBoard and governs data collection and usage. For the purposes of this Privacy
+    Policy, unless otherwise noted, all references to EZ SoundBoard include EZ SoundBoard.
+    The EZ SoundBoard website is a Application site. By using the EZ SoundBoard website,
+    you consent to the data practices described in this statement.\nCollection of
+    your Personal Information\nWe do not collect any personal information about you
+    unless you voluntarily provide it to us. However, you may be required to provide
+    certain personal information to us when you elect to use certain products or services
+    available on the Site. These may include: (a) registering for an account on our
+    Site; (b) entering a sweepstakes or contest sponsored by us or one of our partners;
+    (c) signing up for special offers from selected third parties; (d) sending us
+    an email message; (e) submitting your credit card or other payment information
+    when ordering and purchasing products and services on our Site. To wit, we will
+    use your information for, but not limited to, communicating with you in relation
+    to services and/or products you have requested from us. We also may gather additional
+    personal or non-personal information in the future.\nSharing Information with
+    Third Parties\nEZ SoundBoard does not sell, rent or lease its customer lists to
+    third parties.\nEZ SoundBoard may share data with trusted partners to help perform
+    statistical analysis, send you email or postal mail, provide customer support,
+    or arrange for deliveries. All such third parties are prohibited from using your
+    personal information except to provide these services to EZ SoundBoard, and they
+    are required to maintain the confidentiality of your information.\nEZ SoundBoard
+    may disclose your personal information, without notice, if required to do so by
+    law or in the good faith belief that such action is necessary to: (a) conform
+    to the edicts of the law or comply with legal process served on EZ SoundBoard
+    or the site; (b) protect and defend the rights or property of EZ SoundBoard; and/or
+    (c) act under exigent circumstances to protect the personal safety of users of
+    EZ SoundBoard, or the public.\nAutomatically Collected Information\nInformation
+    about your computer hardware and software may be automatically collected by EZ
+    SoundBoard. This information can include: your IP address, browser type, domain
+    names, access times and referring website addresses. This information is used
+    for the operation of the service, to maintain quality of the service, and to provide
+    general statistics regarding use of the EZ SoundBoard website.\nLinks\nThis website
+    contains links to other sites. Please be aware that we are not responsible for
+    the content or privacy practices of such other sites. We encourage our users to
+    be aware when they leave our site and to read the privacy statements of any other
+    site that collects personally\nThis is a RocketLawyer.com document.\n\n identifiable
+    information.\nRight to Deletion\nSubject to certain exceptions set out below,
+    on receipt of a verifiable request from you, we will:\n\u2022 Delete your personal
+    information from our records; and\n\u2022 Direct any service providers to delete
+    your personal information from their records.\nPlease note that we may not be
+    able to comply with requests to delete your personal information if it is necessary
+    to:\n\u2022 Complete the transaction for which the personal information was collected,
+    fulfill the terms of a written warranty or product recall conducted in accordance
+    with federal law, provide a good or service requested by you, or reasonably anticipated
+    within the context of our ongoing business relationship with you, or otherwise
+    perform a contract between you and us;\n\u2022 Detect security incidents, protect
+    against malicious, deceptive, fraudulent, or illegal activity; or prosecute those
+    responsible for that activity;\n\u2022 Debug to identify and repair errors that
+    impair existing intended functionality;\n\u2022 Exercise free speech, ensure the
+    right of another consumer to exercise his or her right\nof free speech, or exercise
+    another right provided for by law;\n\u2022 Comply with the California Electronic
+    Communications Privacy Act;\n\u2022 Engage in public or peer-reviewed scientific,
+    historical, or statistical research in the\npublic interest that adheres to all
+    other applicable ethics and privacy laws, when our deletion of the information
+    is likely to render impossible or seriously impair the achievement of such research,
+    provided we have obtained your informed consent;\n\u2022 Enable solely internal
+    uses that are reasonably aligned with your expectations based on your relationship
+    with us;\n\u2022 Comply with an existing legal obligation; or\n\u2022 Otherwise
+    use your personal information, internally, in a lawful manner that is\ncompatible
+    with the context in which you provided the information.\nChildren Under Thirteen\nEZ
+    SoundBoard does not knowingly collect personally identifiable information from
+    children under the age of thirteen. If you are under the age of thirteen, you
+    must ask your parent or guardian for permission to use this website.\nDisconnecting
+    your EZ SoundBoard Account from Third Party Websites\nYou will be able to connect
+    your EZ SoundBoard account to third party accounts. BY CONNECTING YOUR EZ SOUNDBOARD
+    ACCOUNT TO YOUR THIRD PARTY ACCOUNT, YOU ACKNOWLEDGE AND AGREE THAT YOU ARE CONSENTING
+    TO THE CONTINUOUS RELEASE OF INFORMATION ABOUT YOU TO OTHERS (IN ACCORDANCE WITH
+    YOUR PRIVACY SETTINGS ON THOSE THIRD PARTY SITES). IF YOU DO NOT WANT INFORMATION
+    ABOUT YOU, INCLUDING PERSONALLY IDENTIFYING INFORMATION, TO BE SHARED IN THIS
+    MANNER, DO NOT USE THIS FEATURE. You may disconnect your account from a third
+    party account at any time.\nThis is a RocketLawyer.com document.\n\n Remove access
+    from Spotify apps permission list\nChanges to this Statement\nEZ SoundBoard reserves
+    the right to change this Privacy Policy from time to time. We will notify you
+    about significant changes in the way we treat personal information by sending
+    a notice to the primary email address specified in your account, by placing a
+    prominent notice on our site, and/or by updating any privacy information on this
+    page. Your continued use of the Site and/or Services available through this Site
+    after such modifications will constitute your: (a) acknowledgment of the modified
+    Privacy Policy; and (b) agreement to abide and be bound by that Policy.\nContact
+    Information\nEZ SoundBoard welcomes your questions or comments regarding this
+    Statement of Privacy. If you believe that EZ SoundBoard has not adhered to this
+    Statement, please contact EZ SoundBoard at:\nEZ SoundBoard\n_________________\n_________________,
+    _________________ _________________\nEmail Address: _________________\nTelephone
+    number: _________________\nEffective as of July 26, 2020\nThis is a RocketLawyer.com
+    document.\n"
+--- !u!222 &596171955
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596171952}
   m_CullTransparentMesh: 0
 --- !u!1 &621608326
 GameObject:
@@ -8456,6 +8847,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867554191}
   m_CullTransparentMesh: 0
+--- !u!1 &879116757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879116758}
+  - component: {fileID: 879116762}
+  - component: {fileID: 879116761}
+  - component: {fileID: 879116759}
+  m_Layer: 5
+  m_Name: ScrollView_ReadMe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &879116758
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879116757}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 37820.11}
+  m_LocalScale: {x: 4.8821125, y: 2.4895103, z: 2.4895103}
+  m_Children:
+  - {fileID: 1653315896}
+  - {fileID: 1857314383}
+  m_Father: {fileID: 936172125}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 179, y: 207}
+  m_SizeDelta: {x: 398.5, y: 520.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &879116759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879116757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &879116761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879116757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &879116762
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879116757}
+  m_CullTransparentMesh: 0
 --- !u!1 &891649082
 GameObject:
   m_ObjectHideFlags: 0
@@ -9067,6 +9548,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931921742}
   m_CullTransparentMesh: 0
+--- !u!1 &936172124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936172125}
+  m_Layer: 0
+  m_Name: ReadMe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &936172125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936172124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -116.01961, y: -137.96947, z: -26383.871}
+  m_LocalScale: {x: 0.69748586, y: 0.69748586, z: 0.69748586}
+  m_Children:
+  - {fileID: 515648022}
+  - {fileID: 879116758}
+  m_Father: {fileID: 557869194}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952574615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9302,7 +9815,7 @@ GameObject:
   - component: {fileID: 1007568521}
   - component: {fileID: 1007568523}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: BackPanel_Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11625,6 +12138,87 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1233114450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1233114451}
+  - component: {fileID: 1233114453}
+  - component: {fileID: 1233114452}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1233114451
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233114450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1844165573}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1233114452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233114450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'EULA/
+
+    PP'
+--- !u!222 &1233114453
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233114450}
+  m_CullTransparentMesh: 0
 --- !u!1 &1248423687
 GameObject:
   m_ObjectHideFlags: 0
@@ -11988,6 +12582,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291430044}
   m_CullTransparentMesh: 0
+--- !u!1 &1295582891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1295582892}
+  - component: {fileID: 1295582894}
+  - component: {fileID: 1295582893}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1295582892
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295582891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1635182445}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.87376475}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1295582893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295582891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1295582894
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295582891}
+  m_CullTransparentMesh: 0
 --- !u!1 &1299652013
 GameObject:
   m_ObjectHideFlags: 0
@@ -12096,6 +12764,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 9.08615, y: 4.9644914, z: 0.411138}
   m_Children:
+  - {fileID: 1844165573}
   - {fileID: 1791216128}
   - {fileID: 1364051257}
   m_Father: {fileID: 557869194}
@@ -12705,7 +13374,7 @@ RectTransform:
   m_Children:
   - {fileID: 2068636412}
   m_Father: {fileID: 1305472719}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15429,6 +16098,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628865748}
   m_CullTransparentMesh: 0
+--- !u!1 &1635182444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635182445}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1635182445
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635182444}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1295582892}
+  m_Father: {fileID: 1857314383}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1640107828
 GameObject:
   m_ObjectHideFlags: 0
@@ -15616,6 +16321,75 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1653315895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653315896}
+  - component: {fileID: 1653315897}
+  m_Layer: 5
+  m_Name: TextContainer_ReadMe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1653315896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653315895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 596171953}
+  m_Father: {fileID: 879116758}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015705, y: -14}
+  m_SizeDelta: {x: 398.5, y: 520.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1653315897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653315895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 596171953}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1857314384}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1659193159
 GameObject:
   m_ObjectHideFlags: 0
@@ -16711,7 +17485,7 @@ RectTransform:
   m_Children:
   - {fileID: 2116718851}
   m_Father: {fileID: 1305472719}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17645,6 +18419,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841932958}
   m_CullTransparentMesh: 0
+--- !u!1 &1844165572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844165573}
+  - component: {fileID: 1844165576}
+  - component: {fileID: 1844165575}
+  - component: {fileID: 1844165574}
+  m_Layer: 5
+  m_Name: Button_ReadMe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1844165573
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844165572}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.14958183, y: 0.2737688, z: 3.3057585}
+  m_Children:
+  - {fileID: 1233114451}
+  m_Father: {fileID: 1305472719}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -40.391144, y: -35.250305}
+  m_SizeDelta: {x: 66.5, y: 64.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1844165574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844165572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1844165575}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 557869195}
+        m_MethodName: OpenReadMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1844165575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844165572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1844165576
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844165572}
+  m_CullTransparentMesh: 0
 --- !u!1 &1851098072
 GameObject:
   m_ObjectHideFlags: 0
@@ -17791,6 +18697,132 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1857314382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857314383}
+  - component: {fileID: 1857314386}
+  - component: {fileID: 1857314385}
+  - component: {fileID: 1857314384}
+  m_Layer: 5
+  m_Name: Scrollbar_ReadMe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1857314383
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857314382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7810354, y: 2.6988502, z: 2.4535}
+  m_Children:
+  - {fileID: 1635182445}
+  m_Father: {fileID: 879116758}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 176, y: 0}
+  m_SizeDelta: {x: 20, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1857314384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857314382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2061169968, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 2
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1295582893}
+  m_HandleRect: {fileID: 1295582892}
+  m_Direction: 2
+  m_Value: 1.0000001
+  m_Size: 0.12623523
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1857314385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857314382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1857314386
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857314382}
+  m_CullTransparentMesh: 0
 --- !u!1 &1859121300
 GameObject:
   m_ObjectHideFlags: 0

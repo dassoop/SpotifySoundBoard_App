@@ -6,6 +6,7 @@ public class Menu : MonoBehaviour
 {
     public GameObject menu;
     public GameObject tutorial;
+    public GameObject readMe;
 
     public void OpenMenu()
     {
@@ -30,5 +31,15 @@ public class Menu : MonoBehaviour
     public void CloseTutorial()
     {
         tutorial.SetActive(false);
+    }
+
+    public void OpenReadMe()
+    {
+        readMe.SetActive(true);
+    }
+
+    public void CloseReadMe()
+    {
+        readMe.SetActive(false);
     }
 }
