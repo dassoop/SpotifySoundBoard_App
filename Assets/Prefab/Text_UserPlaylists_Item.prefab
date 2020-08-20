@@ -305,7 +305,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5977549206343038652}
-        m_MethodName: SendInfoToPlayButton
+        m_MethodName: OnPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -334,7 +334,7 @@ MonoBehaviour:
   playlistID: 
   trackURI: 
   trackName: 
-  trackDuration: 0
+  trackDuration: 100
   canvas: {fileID: 0}
   playlistItemText: {fileID: 2588560260028919627}
   mainButton: {fileID: 0}
@@ -430,4 +430,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tool Tool Tool Tool Tool Tool Tool Tool Tool
+  m_Text: Tool
