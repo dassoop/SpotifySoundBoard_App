@@ -434,7 +434,7 @@ public class API : MonoBehaviour
                 {
                     trackArtist = item["name"];
                 }
-            Debug.Log(trackURI);
+            //Debug.Log(trackURI);
 
             //spotify:track:5bmdJ1tDzAtjSeR8WpALp4
         }

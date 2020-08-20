@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\TrackDuration.cs" />
     <Compile Include="Assets\Scripts\TrackForm.cs" />
     <Compile Include="Assets\Scripts\UserPlaylists_Item.cs" />
+    <None Include="Assets\Fonts\poppins\SIL Open Font License.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/lancemac/Documents/GitRepositories/SpotifySoundboardApp/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
