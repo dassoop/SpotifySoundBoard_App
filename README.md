@@ -18,4 +18,6 @@
 
 ---
 
+**License & Copyright
+© 2020
 
