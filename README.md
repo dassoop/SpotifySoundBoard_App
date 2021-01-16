@@ -2,6 +2,8 @@
 
 **Project Version 1.0.0** 
 
+EZ SoundBoard is a touch pad controller built for mobile or PC use. It is intended as a stream-lined way to trigger playlists and stinger samples during live AV events.
+
 * Unity Project written in C# using the Spotify API 
 * Unity Version 2019.1.8f1
 * Controller to trigger playlist and single samples 
