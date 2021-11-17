@@ -20,6 +20,8 @@ EZ SoundBoard is a touch pad controller built for mobile or PC use. It is intend
 
 ---
 
+![](SoundBoard_Sample.png)
+
 # License & Copyright
 © 2020
 
