@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - InfoDisplayController
     - LoginPrompt
     - MainButton
+    - Menu
     - SliderButton
     - TrackDuration
     - UserPlaylists_Item
@@ -96,22 +97,26 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9982}
+      Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 10016}
+      Script: {instanceID: 9984}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 10018}
     - Class: 114
-      Script: {instanceID: 10388}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10564}
+    - Class: 114
+      Script: {instanceID: 10602}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -130,7 +135,7 @@ ScriptsOnlyBuild:
     className: TrackDuration
   - hash:
       serializedVersion: 2
-      Hash: 971b3825e18e2d54ccfdba4c853010e4
+      Hash: 95255f3386708e2c52fb663d1f9ca0e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CurrentPlaylist_Item
@@ -376,18 +381,6 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
-  - hash:
-      serializedVersion: 2
       Hash: 783e8a0459da59c7e0db49e21d9e913f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -586,7 +579,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: f852dce7dff531b5cd497edb8aa81919
+      Hash: c958442292e5cf77436cf106d98405ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainButton
@@ -598,7 +591,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: fba9fcd4fe4f7963f0c50eae2caf4f98
+      Hash: cd531e71d50ac84c16b849ee833208da
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: API
@@ -692,6 +685,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: e9c0a7d87665a808e63d16c23ea967c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -850,7 +849,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: d9a7096b0cedefe28b98175d6126bf91
+      Hash: 6b13d7238cbf06f59b29f84ae1e4efd3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UserPlaylists_Item
@@ -863,4 +862,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.3.apk
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v1.0.apk

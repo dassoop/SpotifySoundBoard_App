@@ -53,70 +53,72 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9210}
+      Script: {instanceID: 9212}
     - Class: 114
-      Script: {instanceID: 9214}
+      Script: {instanceID: 9216}
     - Class: 114
-      Script: {instanceID: 9288}
-    - Class: 114
-      Script: {instanceID: 9330}
+      Script: {instanceID: 9290}
     - Class: 114
       Script: {instanceID: 9332}
     - Class: 114
       Script: {instanceID: 9334}
     - Class: 114
-      Script: {instanceID: 9338}
+      Script: {instanceID: 9336}
     - Class: 114
-      Script: {instanceID: 9344}
+      Script: {instanceID: 9340}
     - Class: 114
-      Script: {instanceID: 9352}
+      Script: {instanceID: 9346}
     - Class: 114
       Script: {instanceID: 9354}
     - Class: 114
-      Script: {instanceID: 9360}
+      Script: {instanceID: 9356}
     - Class: 114
-      Script: {instanceID: 9378}
+      Script: {instanceID: 9362}
     - Class: 114
       Script: {instanceID: 9380}
     - Class: 114
-      Script: {instanceID: 9386}
+      Script: {instanceID: 9382}
     - Class: 114
       Script: {instanceID: 9388}
     - Class: 114
       Script: {instanceID: 9390}
     - Class: 114
-      Script: {instanceID: 9400}
+      Script: {instanceID: 9392}
     - Class: 114
-      Script: {instanceID: 9440}
+      Script: {instanceID: 9402}
     - Class: 114
-      Script: {instanceID: 9528}
+      Script: {instanceID: 9442}
     - Class: 114
-      Script: {instanceID: 9596}
+      Script: {instanceID: 9530}
     - Class: 114
       Script: {instanceID: 9598}
     - Class: 114
-      Script: {instanceID: 9626}
+      Script: {instanceID: 9600}
     - Class: 114
-      Script: {instanceID: 9834}
+      Script: {instanceID: 9628}
     - Class: 114
-      Script: {instanceID: 9920}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 9984}
+      Script: {instanceID: 9922}
     - Class: 114
-      Script: {instanceID: 10018}
+      Script: {instanceID: 9986}
     - Class: 114
-      Script: {instanceID: 10374}
+      Script: {instanceID: 10020}
     - Class: 114
-      Script: {instanceID: 10390}
+      Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 10564}
+      Script: {instanceID: 10392}
     - Class: 114
-      Script: {instanceID: 10602}
+      Script: {instanceID: 10566}
+    - Class: 114
+      Script: {instanceID: 10604}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -687,7 +689,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: bfc08781811e63651e6f0d8fc263a6f7
+      Hash: e9c0a7d87665a808e63d16c23ea967c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
@@ -862,4 +864,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v0.4.5.app
+  playerPath: /Users/lancemac/Desktop/SpotifySoundBoard_v1.0.app
